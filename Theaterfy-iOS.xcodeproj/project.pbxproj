@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		340018A4272639DC00420C9B /* Theaterfy_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018A3272639DC00420C9B /* Theaterfy_iOSApp.swift */; };
+		340018A6272639DC00420C9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018A5272639DC00420C9B /* ContentView.swift */; };
+		340018A8272639DE00420C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340018A7272639DE00420C9B /* Assets.xcassets */; };
+		340018AB272639DE00420C9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340018AA272639DE00420C9B /* Preview Assets.xcassets */; };
+		340018AD272639DE00420C9B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018AC272639DE00420C9B /* Persistence.swift */; };
+		340018B0272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 340018AE272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld */; };
+		340018BA272639DE00420C9B /* Theaterfy_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018B9272639DE00420C9B /* Theaterfy_iOSTests.swift */; };
+		340018C4272639DE00420C9B /* Theaterfy_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018C3272639DE00420C9B /* Theaterfy_iOSUITests.swift */; };
+		340018C6272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018C5272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		340018B6272639DE00420C9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34001898272639DC00420C9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3400189F272639DC00420C9B;
+			remoteInfo = "Theaterfy-iOS";
+		};
+		340018C0272639DE00420C9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34001898272639DC00420C9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3400189F272639DC00420C9B;
+			remoteInfo = "Theaterfy-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		340018A0272639DC00420C9B /* Theaterfy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Theaterfy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		340018A3272639DC00420C9B /* Theaterfy_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaterfy_iOSApp.swift; sourceTree = "<group>"; };
+		340018A5272639DC00420C9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		340018A7272639DE00420C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		340018AA272639DE00420C9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		340018AC272639DE00420C9B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		340018AF272639DE00420C9B /* Theaterfy_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Theaterfy_iOS.xcdatamodel; sourceTree = "<group>"; };
+		340018B5272639DE00420C9B /* Theaterfy-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Theaterfy-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		340018B9272639DE00420C9B /* Theaterfy_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaterfy_iOSTests.swift; sourceTree = "<group>"; };
+		340018BF272639DE00420C9B /* Theaterfy-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Theaterfy-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		340018C3272639DE00420C9B /* Theaterfy_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaterfy_iOSUITests.swift; sourceTree = "<group>"; };
+		340018C5272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaterfy_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3400189D272639DC00420C9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340018B2272639DE00420C9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340018BC272639DE00420C9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34001897272639DC00420C9B = {
+			isa = PBXGroup;
+			children = (
+				340018A2272639DC00420C9B /* Theaterfy-iOS */,
+				340018B8272639DE00420C9B /* Theaterfy-iOSTests */,
+				340018C2272639DE00420C9B /* Theaterfy-iOSUITests */,
+				340018A1272639DC00420C9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		340018A1272639DC00420C9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				340018A0272639DC00420C9B /* Theaterfy-iOS.app */,
+				340018B5272639DE00420C9B /* Theaterfy-iOSTests.xctest */,
+				340018BF272639DE00420C9B /* Theaterfy-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		340018A2272639DC00420C9B /* Theaterfy-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				340018A3272639DC00420C9B /* Theaterfy_iOSApp.swift */,
+				340018A5272639DC00420C9B /* ContentView.swift */,
+				340018A7272639DE00420C9B /* Assets.xcassets */,
+				340018AC272639DE00420C9B /* Persistence.swift */,
+				340018AE272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld */,
+				340018A9272639DE00420C9B /* Preview Content */,
+			);
+			path = "Theaterfy-iOS";
+			sourceTree = "<group>";
+		};
+		340018A9272639DE00420C9B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				340018AA272639DE00420C9B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		340018B8272639DE00420C9B /* Theaterfy-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				340018B9272639DE00420C9B /* Theaterfy_iOSTests.swift */,
+			);
+			path = "Theaterfy-iOSTests";
+			sourceTree = "<group>";
+		};
+		340018C2272639DE00420C9B /* Theaterfy-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				340018C3272639DE00420C9B /* Theaterfy_iOSUITests.swift */,
+				340018C5272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift */,
+			);
+			path = "Theaterfy-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3400189F272639DC00420C9B /* Theaterfy-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 340018C9272639DE00420C9B /* Build configuration list for PBXNativeTarget "Theaterfy-iOS" */;
+			buildPhases = (
+				3400189C272639DC00420C9B /* Sources */,
+				3400189D272639DC00420C9B /* Frameworks */,
+				3400189E272639DC00420C9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Theaterfy-iOS";
+			productName = "Theaterfy-iOS";
+			productReference = 340018A0272639DC00420C9B /* Theaterfy-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		340018B4272639DE00420C9B /* Theaterfy-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 340018CC272639DE00420C9B /* Build configuration list for PBXNativeTarget "Theaterfy-iOSTests" */;
+			buildPhases = (
+				340018B1272639DE00420C9B /* Sources */,
+				340018B2272639DE00420C9B /* Frameworks */,
+				340018B3272639DE00420C9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				340018B7272639DE00420C9B /* PBXTargetDependency */,
+			);
+			name = "Theaterfy-iOSTests";
+			productName = "Theaterfy-iOSTests";
+			productReference = 340018B5272639DE00420C9B /* Theaterfy-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		340018BE272639DE00420C9B /* Theaterfy-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 340018CF272639DE00420C9B /* Build configuration list for PBXNativeTarget "Theaterfy-iOSUITests" */;
+			buildPhases = (
+				340018BB272639DE00420C9B /* Sources */,
+				340018BC272639DE00420C9B /* Frameworks */,
+				340018BD272639DE00420C9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				340018C1272639DE00420C9B /* PBXTargetDependency */,
+			);
+			name = "Theaterfy-iOSUITests";
+			productName = "Theaterfy-iOSUITests";
+			productReference = 340018BF272639DE00420C9B /* Theaterfy-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34001898272639DC00420C9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					3400189F272639DC00420C9B = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					340018B4272639DE00420C9B = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 3400189F272639DC00420C9B;
+					};
+					340018BE272639DE00420C9B = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 3400189F272639DC00420C9B;
+					};
+				};
+			};
+			buildConfigurationList = 3400189B272639DC00420C9B /* Build configuration list for PBXProject "Theaterfy-iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34001897272639DC00420C9B;
+			productRefGroup = 340018A1272639DC00420C9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3400189F272639DC00420C9B /* Theaterfy-iOS */,
+				340018B4272639DE00420C9B /* Theaterfy-iOSTests */,
+				340018BE272639DE00420C9B /* Theaterfy-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3400189E272639DC00420C9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340018AB272639DE00420C9B /* Preview Assets.xcassets in Resources */,
+				340018A8272639DE00420C9B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340018B3272639DE00420C9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340018BD272639DE00420C9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3400189C272639DC00420C9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340018B0272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld in Sources */,
+				340018AD272639DE00420C9B /* Persistence.swift in Sources */,
+				340018A6272639DC00420C9B /* ContentView.swift in Sources */,
+				340018A4272639DC00420C9B /* Theaterfy_iOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340018B1272639DE00420C9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340018BA272639DE00420C9B /* Theaterfy_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340018BB272639DE00420C9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340018C4272639DE00420C9B /* Theaterfy_iOSUITests.swift in Sources */,
+				340018C6272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		340018B7272639DE00420C9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3400189F272639DC00420C9B /* Theaterfy-iOS */;
+			targetProxy = 340018B6272639DE00420C9B /* PBXContainerItemProxy */;
+		};
+		340018C1272639DE00420C9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3400189F272639DC00420C9B /* Theaterfy-iOS */;
+			targetProxy = 340018C0272639DE00420C9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		340018C7272639DE00420C9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		340018C8272639DE00420C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		340018CA272639DE00420C9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Theaterfy-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = H6DH8Y24TS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.schwarz.pedro.Theaterfy-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		340018CB272639DE00420C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Theaterfy-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = H6DH8Y24TS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.schwarz.pedro.Theaterfy-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		340018CD272639DE00420C9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H6DH8Y24TS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.schwarz.pedro.Theaterfy-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Theaterfy-iOS.app/Theaterfy-iOS";
+			};
+			name = Debug;
+		};
+		340018CE272639DE00420C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H6DH8Y24TS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.schwarz.pedro.Theaterfy-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Theaterfy-iOS.app/Theaterfy-iOS";
+			};
+			name = Release;
+		};
+		340018D0272639DE00420C9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H6DH8Y24TS;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.schwarz.pedro.Theaterfy-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Theaterfy-iOS";
+			};
+			name = Debug;
+		};
+		340018D1272639DE00420C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H6DH8Y24TS;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.schwarz.pedro.Theaterfy-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Theaterfy-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3400189B272639DC00420C9B /* Build configuration list for PBXProject "Theaterfy-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340018C7272639DE00420C9B /* Debug */,
+				340018C8272639DE00420C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		340018C9272639DE00420C9B /* Build configuration list for PBXNativeTarget "Theaterfy-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340018CA272639DE00420C9B /* Debug */,
+				340018CB272639DE00420C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		340018CC272639DE00420C9B /* Build configuration list for PBXNativeTarget "Theaterfy-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340018CD272639DE00420C9B /* Debug */,
+				340018CE272639DE00420C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		340018CF272639DE00420C9B /* Build configuration list for PBXNativeTarget "Theaterfy-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340018D0272639DE00420C9B /* Debug */,
+				340018D1272639DE00420C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		340018AE272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				340018AF272639DE00420C9B /* Theaterfy_iOS.xcdatamodel */,
+			);
+			currentVersion = 340018AF272639DE00420C9B /* Theaterfy_iOS.xcdatamodel */;
+			path = Theaterfy_iOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 34001898272639DC00420C9B /* Project object */;
+}
