@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		340018A4272639DC00420C9B /* Theaterfy_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018A3272639DC00420C9B /* Theaterfy_iOSApp.swift */; };
-		340018A6272639DC00420C9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018A5272639DC00420C9B /* ContentView.swift */; };
+		340018A6272639DC00420C9B /* MoviesListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018A5272639DC00420C9B /* MoviesListPage.swift */; };
 		340018A8272639DE00420C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340018A7272639DE00420C9B /* Assets.xcassets */; };
 		340018AB272639DE00420C9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340018AA272639DE00420C9B /* Preview Assets.xcassets */; };
 		340018AD272639DE00420C9B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018AC272639DE00420C9B /* Persistence.swift */; };
@@ -16,6 +16,11 @@
 		340018BA272639DE00420C9B /* Theaterfy_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018B9272639DE00420C9B /* Theaterfy_iOSTests.swift */; };
 		340018C4272639DE00420C9B /* Theaterfy_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018C3272639DE00420C9B /* Theaterfy_iOSUITests.swift */; };
 		340018C6272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018C5272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift */; };
+		342BE002272773B800C7805C /* Failures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE001272773B800C7805C /* Failures.swift */; };
+		342BE0042727747000C7805C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE0032727747000C7805C /* AppColors.swift */; };
+		342BE008272774C400C7805C /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE007272774C400C7805C /* ServerConstants.swift */; };
+		342BE0162727761B00C7805C /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE0152727761B00C7805C /* MovieModel.swift */; };
+		342BE0182727762400C7805C /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE0172727762400C7805C /* PaginationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,7 @@
 /* Begin PBXFileReference section */
 		340018A0272639DC00420C9B /* Theaterfy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Theaterfy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		340018A3272639DC00420C9B /* Theaterfy_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaterfy_iOSApp.swift; sourceTree = "<group>"; };
-		340018A5272639DC00420C9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		340018A5272639DC00420C9B /* MoviesListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListPage.swift; sourceTree = "<group>"; };
 		340018A7272639DE00420C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		340018AA272639DE00420C9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		340018AC272639DE00420C9B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +53,11 @@
 		340018BF272639DE00420C9B /* Theaterfy-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Theaterfy-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		340018C3272639DE00420C9B /* Theaterfy_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaterfy_iOSUITests.swift; sourceTree = "<group>"; };
 		340018C5272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaterfy_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		342BE001272773B800C7805C /* Failures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failures.swift; sourceTree = "<group>"; };
+		342BE0032727747000C7805C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		342BE007272774C400C7805C /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
+		342BE0152727761B00C7805C /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		342BE0172727762400C7805C /* PaginationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +108,12 @@
 		340018A2272639DC00420C9B /* Theaterfy-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				342BDFF9272772FF00C7805C /* features */,
+				342BDFF8272772F800C7805C /* core */,
+				342BDFF7272772F100C7805C /* app */,
+				342BDFF6272772E000C7805C /* assets */,
 				340018A3272639DC00420C9B /* Theaterfy_iOSApp.swift */,
-				340018A5272639DC00420C9B /* ContentView.swift */,
-				340018A7272639DE00420C9B /* Assets.xcassets */,
-				340018AC272639DE00420C9B /* Persistence.swift */,
-				340018AE272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld */,
+				340018A5272639DC00420C9B /* MoviesListPage.swift */,
 				340018A9272639DE00420C9B /* Preview Content */,
 			);
 			path = "Theaterfy-iOS";
@@ -131,6 +142,202 @@
 				340018C5272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift */,
 			);
 			path = "Theaterfy-iOSUITests";
+			sourceTree = "<group>";
+		};
+		342BDFF6272772E000C7805C /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				340018A7272639DE00420C9B /* Assets.xcassets */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		342BDFF7272772F100C7805C /* app */ = {
+			isa = PBXGroup;
+			children = (
+				342BE006272774B200C7805C /* constants */,
+				342BE005272774A800C7805C /* colors */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		342BDFF8272772F800C7805C /* core */ = {
+			isa = PBXGroup;
+			children = (
+				342BE0002727738D00C7805C /* usecases */,
+				342BDFFF2727738300C7805C /* entities */,
+				342BDFFE2727735800C7805C /* models */,
+				342BDFFC2727731B00C7805C /* server */,
+				342BDFFB2727731400C7805C /* errors */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		342BDFF9272772FF00C7805C /* features */ = {
+			isa = PBXGroup;
+			children = (
+				342BDFFA2727730700C7805C /* movies */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		342BDFFA2727730700C7805C /* movies */ = {
+			isa = PBXGroup;
+			children = (
+				342BE00B2727752000C7805C /* data */,
+				342BE00A2727751800C7805C /* presentation */,
+				342BE0092727751100C7805C /* domain */,
+			);
+			path = movies;
+			sourceTree = "<group>";
+		};
+		342BDFFB2727731400C7805C /* errors */ = {
+			isa = PBXGroup;
+			children = (
+				342BE001272773B800C7805C /* Failures.swift */,
+			);
+			path = errors;
+			sourceTree = "<group>";
+		};
+		342BDFFC2727731B00C7805C /* server */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = server;
+			sourceTree = "<group>";
+		};
+		342BDFFE2727735800C7805C /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		342BDFFF2727738300C7805C /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				340018AC272639DE00420C9B /* Persistence.swift */,
+				340018AE272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld */,
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		342BE0002727738D00C7805C /* usecases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = usecases;
+			sourceTree = "<group>";
+		};
+		342BE005272774A800C7805C /* colors */ = {
+			isa = PBXGroup;
+			children = (
+				342BE0032727747000C7805C /* AppColors.swift */,
+			);
+			path = colors;
+			sourceTree = "<group>";
+		};
+		342BE006272774B200C7805C /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				342BE007272774C400C7805C /* ServerConstants.swift */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
+		342BE0092727751100C7805C /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				342BE00E2727753600C7805C /* repositories */,
+				342BE00D2727752D00C7805C /* entities */,
+				342BE00C2727752600C7805C /* usecases */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		342BE00A2727751800C7805C /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				342BE0112727756800C7805C /* viewmodels */,
+				342BE0102727756100C7805C /* pages */,
+				342BE00F2727755B00C7805C /* components */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		342BE00B2727752000C7805C /* data */ = {
+			isa = PBXGroup;
+			children = (
+				342BE0142727758A00C7805C /* models */,
+				342BE0132727758000C7805C /* repositories */,
+				342BE0122727757100C7805C /* datasources */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		342BE00C2727752600C7805C /* usecases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = usecases;
+			sourceTree = "<group>";
+		};
+		342BE00D2727752D00C7805C /* entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		342BE00E2727753600C7805C /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		342BE00F2727755B00C7805C /* components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		342BE0102727756100C7805C /* pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		342BE0112727756800C7805C /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		342BE0122727757100C7805C /* datasources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = datasources;
+			sourceTree = "<group>";
+		};
+		342BE0132727758000C7805C /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		342BE0142727758A00C7805C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				342BE0152727761B00C7805C /* MovieModel.swift */,
+				342BE0172727762400C7805C /* PaginationModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +472,12 @@
 			files = (
 				340018B0272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld in Sources */,
 				340018AD272639DE00420C9B /* Persistence.swift in Sources */,
-				340018A6272639DC00420C9B /* ContentView.swift in Sources */,
+				340018A6272639DC00420C9B /* MoviesListPage.swift in Sources */,
+				342BE0042727747000C7805C /* AppColors.swift in Sources */,
+				342BE0182727762400C7805C /* PaginationModel.swift in Sources */,
+				342BE0162727761B00C7805C /* MovieModel.swift in Sources */,
+				342BE002272773B800C7805C /* Failures.swift in Sources */,
+				342BE008272774C400C7805C /* ServerConstants.swift in Sources */,
 				340018A4272639DC00420C9B /* Theaterfy_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
