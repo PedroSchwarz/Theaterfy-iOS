@@ -20,6 +20,9 @@
 		34079DAD2728A934008B0C68 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 34079DAC2728A934008B0C68 /* Alamofire */; };
 		34079DAF2728AB4B008B0C68 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DAE2728AB4B008B0C68 /* UseCase.swift */; };
 		34079DB12728ABF3008B0C68 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DB02728ABF3008B0C68 /* Model.swift */; };
+		34079DB32728AC8D008B0C68 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DB22728AC8D008B0C68 /* Movie.swift */; };
+		34079DB52728ACF3008B0C68 /* GetMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DB42728ACF3008B0C68 /* GetMovies.swift */; };
+		34079DB72728ADA7008B0C68 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DB62728ADA7008B0C68 /* MoviesRepository.swift */; };
 		342BE002272773B800C7805C /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE001272773B800C7805C /* Failure.swift */; };
 		342BE0042727747000C7805C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE0032727747000C7805C /* AppColors.swift */; };
 		342BE008272774C400C7805C /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE007272774C400C7805C /* ServerConstants.swift */; };
@@ -60,6 +63,9 @@
 		34079DA92728A8FE008B0C68 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		34079DAE2728AB4B008B0C68 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		34079DB02728ABF3008B0C68 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		34079DB22728AC8D008B0C68 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		34079DB42728ACF3008B0C68 /* GetMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovies.swift; sourceTree = "<group>"; };
+		34079DB62728ADA7008B0C68 /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
 		342BE001272773B800C7805C /* Failure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
 		342BE0032727747000C7805C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		342BE007272774C400C7805C /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
@@ -289,6 +295,7 @@
 		342BE00C2727752600C7805C /* usecases */ = {
 			isa = PBXGroup;
 			children = (
+				34079DB42728ACF3008B0C68 /* GetMovies.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -296,6 +303,7 @@
 		342BE00D2727752D00C7805C /* entities */ = {
 			isa = PBXGroup;
 			children = (
+				34079DB22728AC8D008B0C68 /* Movie.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -303,6 +311,7 @@
 		342BE00E2727753600C7805C /* repositories */ = {
 			isa = PBXGroup;
 			children = (
+				34079DB62728ADA7008B0C68 /* MoviesRepository.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -488,6 +497,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				34079DAA2728A8FE008B0C68 /* Server.swift in Sources */,
+				34079DB72728ADA7008B0C68 /* MoviesRepository.swift in Sources */,
+				34079DB52728ACF3008B0C68 /* GetMovies.swift in Sources */,
 				340018B0272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld in Sources */,
 				340018AD272639DE00420C9B /* Persistence.swift in Sources */,
 				34079DB12728ABF3008B0C68 /* Model.swift in Sources */,
@@ -495,6 +506,7 @@
 				342BE0042727747000C7805C /* AppColors.swift in Sources */,
 				34079DAF2728AB4B008B0C68 /* UseCase.swift in Sources */,
 				342BE0182727762400C7805C /* PaginationModel.swift in Sources */,
+				34079DB32728AC8D008B0C68 /* Movie.swift in Sources */,
 				342BE0162727761B00C7805C /* MovieModel.swift in Sources */,
 				342BE002272773B800C7805C /* Failure.swift in Sources */,
 				342BE008272774C400C7805C /* ServerConstants.swift in Sources */,
