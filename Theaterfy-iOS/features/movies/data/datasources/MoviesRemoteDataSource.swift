@@ -16,7 +16,10 @@ struct MoviesRemoteDataSourceImpl : MoviesRemoteDataSource {
     var server: Server
     
     func getMovies(_ page: Int) -> AnyPublisher<[MovieModel], Failure> {
-        return server.execute(path: "", decodable: PaginationModel<MovieModel>.self)
+        return server.execute(
+            path: ServerConstants.buildPath(path: ServerConstants.GetNowPlaying.PATH),
+            decodable: PaginationModel<MovieModel>.self
+        )
             .map({ result in
                 result.results
             })
