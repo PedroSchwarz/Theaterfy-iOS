@@ -10,7 +10,7 @@ import Alamofire
 import Combine
 
 struct Server {
-    func execute<T>(path: String) -> AnyPublisher<T, Failure>  where T : Codable {
+    func execute<T>(path: String, decodable: T.Type) -> AnyPublisher<T, Failure>  where T : Codable {
         return AF.request(path)
             .publishDecodable(type: T.self, queue: .main, decoder: JSONDecoder())
             .tryMap { response in
