@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Failures: Error {
+enum Failure: Error {
     case ServerFailure(error: String)
     case CacheFailure(error: String)
 }

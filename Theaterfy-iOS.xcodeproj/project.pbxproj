@@ -16,7 +16,11 @@
 		340018BA272639DE00420C9B /* Theaterfy_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018B9272639DE00420C9B /* Theaterfy_iOSTests.swift */; };
 		340018C4272639DE00420C9B /* Theaterfy_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018C3272639DE00420C9B /* Theaterfy_iOSUITests.swift */; };
 		340018C6272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018C5272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift */; };
-		342BE002272773B800C7805C /* Failures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE001272773B800C7805C /* Failures.swift */; };
+		34079DAA2728A8FE008B0C68 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DA92728A8FE008B0C68 /* Server.swift */; };
+		34079DAD2728A934008B0C68 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 34079DAC2728A934008B0C68 /* Alamofire */; };
+		34079DAF2728AB4B008B0C68 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DAE2728AB4B008B0C68 /* UseCase.swift */; };
+		34079DB12728ABF3008B0C68 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DB02728ABF3008B0C68 /* Model.swift */; };
+		342BE002272773B800C7805C /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE001272773B800C7805C /* Failure.swift */; };
 		342BE0042727747000C7805C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE0032727747000C7805C /* AppColors.swift */; };
 		342BE008272774C400C7805C /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE007272774C400C7805C /* ServerConstants.swift */; };
 		342BE0162727761B00C7805C /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE0152727761B00C7805C /* MovieModel.swift */; };
@@ -53,7 +57,10 @@
 		340018BF272639DE00420C9B /* Theaterfy-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Theaterfy-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		340018C3272639DE00420C9B /* Theaterfy_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaterfy_iOSUITests.swift; sourceTree = "<group>"; };
 		340018C5272639DE00420C9B /* Theaterfy_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaterfy_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		342BE001272773B800C7805C /* Failures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failures.swift; sourceTree = "<group>"; };
+		34079DA92728A8FE008B0C68 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		34079DAE2728AB4B008B0C68 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		34079DB02728ABF3008B0C68 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		342BE001272773B800C7805C /* Failure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
 		342BE0032727747000C7805C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		342BE007272774C400C7805C /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
 		342BE0152727761B00C7805C /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
@@ -65,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34079DAD2728A934008B0C68 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +202,7 @@
 		342BDFFB2727731400C7805C /* errors */ = {
 			isa = PBXGroup;
 			children = (
-				342BE001272773B800C7805C /* Failures.swift */,
+				342BE001272773B800C7805C /* Failure.swift */,
 			);
 			path = errors;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 		342BDFFC2727731B00C7805C /* server */ = {
 			isa = PBXGroup;
 			children = (
+				34079DA92728A8FE008B0C68 /* Server.swift */,
 			);
 			path = server;
 			sourceTree = "<group>";
@@ -209,6 +218,7 @@
 		342BDFFE2727735800C7805C /* models */ = {
 			isa = PBXGroup;
 			children = (
+				34079DB02728ABF3008B0C68 /* Model.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -225,6 +235,7 @@
 		342BE0002727738D00C7805C /* usecases */ = {
 			isa = PBXGroup;
 			children = (
+				34079DAE2728AB4B008B0C68 /* UseCase.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -356,6 +367,9 @@
 			dependencies = (
 			);
 			name = "Theaterfy-iOS";
+			packageProductDependencies = (
+				34079DAC2728A934008B0C68 /* Alamofire */,
+			);
 			productName = "Theaterfy-iOS";
 			productReference = 340018A0272639DC00420C9B /* Theaterfy-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -428,6 +442,9 @@
 				Base,
 			);
 			mainGroup = 34001897272639DC00420C9B;
+			packageReferences = (
+				34079DAB2728A934008B0C68 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 340018A1272639DC00420C9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -470,13 +487,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34079DAA2728A8FE008B0C68 /* Server.swift in Sources */,
 				340018B0272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld in Sources */,
 				340018AD272639DE00420C9B /* Persistence.swift in Sources */,
+				34079DB12728ABF3008B0C68 /* Model.swift in Sources */,
 				340018A6272639DC00420C9B /* MoviesListPage.swift in Sources */,
 				342BE0042727747000C7805C /* AppColors.swift in Sources */,
+				34079DAF2728AB4B008B0C68 /* UseCase.swift in Sources */,
 				342BE0182727762400C7805C /* PaginationModel.swift in Sources */,
 				342BE0162727761B00C7805C /* MovieModel.swift in Sources */,
-				342BE002272773B800C7805C /* Failures.swift in Sources */,
+				342BE002272773B800C7805C /* Failure.swift in Sources */,
 				342BE008272774C400C7805C /* ServerConstants.swift in Sources */,
 				340018A4272639DC00420C9B /* Theaterfy_iOSApp.swift in Sources */,
 			);
@@ -827,6 +847,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		34079DAB2728A934008B0C68 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		34079DAC2728A934008B0C68 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34079DAB2728A934008B0C68 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		340018AE272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld */ = {
