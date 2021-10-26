@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+struct PaginationModel<T> : Model where T : Model {
+    typealias Element = Pagination
+    
+    var totalPages: Int
+    var results: [T]
+    
+    func toEntity() -> Element<T> {
+        return Pagination(
+            totalPages: self.totalPages,
+            results: self.results
+        )
+    }
+}

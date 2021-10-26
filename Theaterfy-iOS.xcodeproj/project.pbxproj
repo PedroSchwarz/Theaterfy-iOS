@@ -23,6 +23,7 @@
 		34079DB32728AC8D008B0C68 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DB22728AC8D008B0C68 /* Movie.swift */; };
 		34079DB52728ACF3008B0C68 /* GetMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DB42728ACF3008B0C68 /* GetMovies.swift */; };
 		34079DB72728ADA7008B0C68 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DB62728ADA7008B0C68 /* MoviesRepository.swift */; };
+		34079DB92728B06D008B0C68 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DB82728B06D008B0C68 /* Pagination.swift */; };
 		342BE002272773B800C7805C /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE001272773B800C7805C /* Failure.swift */; };
 		342BE0042727747000C7805C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE0032727747000C7805C /* AppColors.swift */; };
 		342BE008272774C400C7805C /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE007272774C400C7805C /* ServerConstants.swift */; };
@@ -66,6 +67,7 @@
 		34079DB22728AC8D008B0C68 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		34079DB42728ACF3008B0C68 /* GetMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovies.swift; sourceTree = "<group>"; };
 		34079DB62728ADA7008B0C68 /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
+		34079DB82728B06D008B0C68 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		342BE001272773B800C7805C /* Failure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
 		342BE0032727747000C7805C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		342BE007272774C400C7805C /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				34079DB22728AC8D008B0C68 /* Movie.swift */,
+				34079DB82728B06D008B0C68 /* Pagination.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				34079DB52728ACF3008B0C68 /* GetMovies.swift in Sources */,
 				340018B0272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld in Sources */,
 				340018AD272639DE00420C9B /* Persistence.swift in Sources */,
+				34079DB92728B06D008B0C68 /* Pagination.swift in Sources */,
 				34079DB12728ABF3008B0C68 /* Model.swift in Sources */,
 				340018A6272639DC00420C9B /* MoviesListPage.swift in Sources */,
 				342BE0042727747000C7805C /* AppColors.swift in Sources */,
