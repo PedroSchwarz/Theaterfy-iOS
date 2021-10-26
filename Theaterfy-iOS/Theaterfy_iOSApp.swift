@@ -13,7 +13,7 @@ struct Theaterfy_iOSApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MoviesListPage()
+            MoviesPage()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

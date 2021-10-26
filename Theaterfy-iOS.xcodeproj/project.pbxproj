@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		340018A4272639DC00420C9B /* Theaterfy_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018A3272639DC00420C9B /* Theaterfy_iOSApp.swift */; };
-		340018A6272639DC00420C9B /* MoviesListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018A5272639DC00420C9B /* MoviesListPage.swift */; };
 		340018A8272639DE00420C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340018A7272639DE00420C9B /* Assets.xcassets */; };
 		340018AB272639DE00420C9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340018AA272639DE00420C9B /* Preview Assets.xcassets */; };
 		340018AD272639DE00420C9B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340018AC272639DE00420C9B /* Persistence.swift */; };
@@ -26,6 +25,8 @@
 		34079DB92728B06D008B0C68 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DB82728B06D008B0C68 /* Pagination.swift */; };
 		34079DBB2728B1C2008B0C68 /* MoviesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DBA2728B1C2008B0C68 /* MoviesRepositoryImpl.swift */; };
 		34079DBD2728B226008B0C68 /* MoviesRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DBC2728B226008B0C68 /* MoviesRemoteDataSource.swift */; };
+		34079DBF2728BA5A008B0C68 /* MoviesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DBE2728BA5A008B0C68 /* MoviesPage.swift */; };
+		34079DC12728BA6B008B0C68 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DC02728BA6B008B0C68 /* MoviesViewModel.swift */; };
 		342BE002272773B800C7805C /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE001272773B800C7805C /* Failure.swift */; };
 		342BE0042727747000C7805C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE0032727747000C7805C /* AppColors.swift */; };
 		342BE008272774C400C7805C /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE007272774C400C7805C /* ServerConstants.swift */; };
@@ -53,7 +54,6 @@
 /* Begin PBXFileReference section */
 		340018A0272639DC00420C9B /* Theaterfy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Theaterfy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		340018A3272639DC00420C9B /* Theaterfy_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaterfy_iOSApp.swift; sourceTree = "<group>"; };
-		340018A5272639DC00420C9B /* MoviesListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListPage.swift; sourceTree = "<group>"; };
 		340018A7272639DE00420C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		340018AA272639DE00420C9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		340018AC272639DE00420C9B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -72,6 +72,8 @@
 		34079DB82728B06D008B0C68 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		34079DBA2728B1C2008B0C68 /* MoviesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepositoryImpl.swift; sourceTree = "<group>"; };
 		34079DBC2728B226008B0C68 /* MoviesRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRemoteDataSource.swift; sourceTree = "<group>"; };
+		34079DBE2728BA5A008B0C68 /* MoviesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPage.swift; sourceTree = "<group>"; };
+		34079DC02728BA6B008B0C68 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		342BE001272773B800C7805C /* Failure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
 		342BE0032727747000C7805C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		342BE007272774C400C7805C /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
@@ -133,7 +135,6 @@
 				342BDFF7272772F100C7805C /* app */,
 				342BDFF6272772E000C7805C /* assets */,
 				340018A3272639DC00420C9B /* Theaterfy_iOSApp.swift */,
-				340018A5272639DC00420C9B /* MoviesListPage.swift */,
 				340018A9272639DE00420C9B /* Preview Content */,
 			);
 			path = "Theaterfy-iOS";
@@ -164,6 +165,13 @@
 			path = "Theaterfy-iOSUITests";
 			sourceTree = "<group>";
 		};
+		34079DC22728C047008B0C68 /* locales */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = locales;
+			sourceTree = "<group>";
+		};
 		342BDFF6272772E000C7805C /* assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +183,7 @@
 		342BDFF7272772F100C7805C /* app */ = {
 			isa = PBXGroup;
 			children = (
+				34079DC22728C047008B0C68 /* locales */,
 				342BE006272774B200C7805C /* constants */,
 				342BE005272774A800C7805C /* colors */,
 			);
@@ -333,6 +342,7 @@
 		342BE0102727756100C7805C /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				34079DBE2728BA5A008B0C68 /* MoviesPage.swift */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -340,6 +350,7 @@
 		342BE0112727756800C7805C /* viewmodels */ = {
 			isa = PBXGroup;
 			children = (
+				34079DC02728BA6B008B0C68 /* MoviesViewModel.swift */,
 			);
 			path = viewmodels;
 			sourceTree = "<group>";
@@ -514,15 +525,16 @@
 				340018AD272639DE00420C9B /* Persistence.swift in Sources */,
 				34079DB92728B06D008B0C68 /* Pagination.swift in Sources */,
 				34079DB12728ABF3008B0C68 /* Model.swift in Sources */,
-				340018A6272639DC00420C9B /* MoviesListPage.swift in Sources */,
 				342BE0042727747000C7805C /* AppColors.swift in Sources */,
 				34079DAF2728AB4B008B0C68 /* UseCase.swift in Sources */,
 				342BE0182727762400C7805C /* PaginationModel.swift in Sources */,
 				34079DB32728AC8D008B0C68 /* Movie.swift in Sources */,
+				34079DBF2728BA5A008B0C68 /* MoviesPage.swift in Sources */,
 				342BE0162727761B00C7805C /* MovieModel.swift in Sources */,
 				342BE002272773B800C7805C /* Failure.swift in Sources */,
 				342BE008272774C400C7805C /* ServerConstants.swift in Sources */,
 				340018A4272639DC00420C9B /* Theaterfy_iOSApp.swift in Sources */,
+				34079DC12728BA6B008B0C68 /* MoviesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,16 +15,13 @@ struct ServerConstants {
         static let PATH = "/movie/now_playing"
     }
     
-    static func buildPath(base: String = ServerConstants.BASE_URL, path: String, queryStrings: [String]? = nil) -> String {
+    static func buildPath(base: String = ServerConstants.BASE_URL, path: String, query: String? = nil) -> String {
         var builtQuery: String = "?api_key=\(ServerConstants.API_KEY)"
         
-        if let queries = queryStrings {
-            queries.forEach { query in
-               builtQuery += "\(query)\(queries.last != query ? "&" :  "")"
-           }
+        if let queries = query {
+            builtQuery = "\(builtQuery)\(queries)"
         }
-        
-        print("\(base)\(path)\(builtQuery)")
+    
         return "\(base)\(path)\(builtQuery)"
     }
 }
