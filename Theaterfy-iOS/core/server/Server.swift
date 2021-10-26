@@ -9,10 +9,6 @@ import Foundation
 import Alamofire
 import Combine
 
-enum Method {
-    case GET
-}
-
 struct Server {
     func execute<T>(path: String) -> AnyPublisher<T, Failure>  where T : Codable {
         return AF.request(path)
