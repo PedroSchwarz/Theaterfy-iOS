@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct Theaterfy_iOSApp: App {
-    let persistenceController = PersistenceController.shared
+    init() {
+        AppModules.initContainer()
+    }
 
     var body: some Scene {
         WindowGroup {
             MoviesPage()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

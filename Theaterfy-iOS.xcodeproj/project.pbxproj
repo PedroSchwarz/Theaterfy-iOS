@@ -27,6 +27,8 @@
 		34079DBD2728B226008B0C68 /* MoviesRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DBC2728B226008B0C68 /* MoviesRemoteDataSource.swift */; };
 		34079DBF2728BA5A008B0C68 /* MoviesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DBE2728BA5A008B0C68 /* MoviesPage.swift */; };
 		34079DC12728BA6B008B0C68 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DC02728BA6B008B0C68 /* MoviesViewModel.swift */; };
+		34079DC52728CC34008B0C68 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 34079DC42728CC34008B0C68 /* Swinject */; };
+		34079DC82728CC5A008B0C68 /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34079DC72728CC5A008B0C68 /* AppModules.swift */; };
 		342BE002272773B800C7805C /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE001272773B800C7805C /* Failure.swift */; };
 		342BE0042727747000C7805C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE0032727747000C7805C /* AppColors.swift */; };
 		342BE008272774C400C7805C /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE007272774C400C7805C /* ServerConstants.swift */; };
@@ -74,6 +76,7 @@
 		34079DBC2728B226008B0C68 /* MoviesRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRemoteDataSource.swift; sourceTree = "<group>"; };
 		34079DBE2728BA5A008B0C68 /* MoviesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPage.swift; sourceTree = "<group>"; };
 		34079DC02728BA6B008B0C68 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		34079DC72728CC5A008B0C68 /* AppModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModules.swift; sourceTree = "<group>"; };
 		342BE001272773B800C7805C /* Failure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
 		342BE0032727747000C7805C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		342BE007272774C400C7805C /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34079DAD2728A934008B0C68 /* Alamofire in Frameworks */,
+				34079DC52728CC34008B0C68 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +134,7 @@
 		340018A2272639DC00420C9B /* Theaterfy-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				34079DC62728CC45008B0C68 /* di */,
 				342BDFF9272772FF00C7805C /* features */,
 				342BDFF8272772F800C7805C /* core */,
 				342BDFF7272772F100C7805C /* app */,
@@ -170,6 +175,14 @@
 			children = (
 			);
 			path = locales;
+			sourceTree = "<group>";
+		};
+		34079DC62728CC45008B0C68 /* di */ = {
+			isa = PBXGroup;
+			children = (
+				34079DC72728CC5A008B0C68 /* AppModules.swift */,
+			);
+			path = di;
 			sourceTree = "<group>";
 		};
 		342BDFF6272772E000C7805C /* assets */ = {
@@ -398,6 +411,7 @@
 			name = "Theaterfy-iOS";
 			packageProductDependencies = (
 				34079DAC2728A934008B0C68 /* Alamofire */,
+				34079DC42728CC34008B0C68 /* Swinject */,
 			);
 			productName = "Theaterfy-iOS";
 			productReference = 340018A0272639DC00420C9B /* Theaterfy-iOS.app */;
@@ -473,6 +487,7 @@
 			mainGroup = 34001897272639DC00420C9B;
 			packageReferences = (
 				34079DAB2728A934008B0C68 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				34079DC32728CC34008B0C68 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 340018A1272639DC00420C9B /* Products */;
 			projectDirPath = "";
@@ -533,6 +548,7 @@
 				342BE0162727761B00C7805C /* MovieModel.swift in Sources */,
 				342BE002272773B800C7805C /* Failure.swift in Sources */,
 				342BE008272774C400C7805C /* ServerConstants.swift in Sources */,
+				34079DC82728CC5A008B0C68 /* AppModules.swift in Sources */,
 				340018A4272639DC00420C9B /* Theaterfy_iOSApp.swift in Sources */,
 				34079DC12728BA6B008B0C68 /* MoviesViewModel.swift in Sources */,
 			);
@@ -893,6 +909,14 @@
 				kind = branch;
 			};
 		};
+		34079DC32728CC34008B0C68 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -900,6 +924,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 34079DAB2728A934008B0C68 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		34079DC42728CC34008B0C68 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34079DC32728CC34008B0C68 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 

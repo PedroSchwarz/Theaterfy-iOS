@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct MoviesPage: View {
-    
-    @StateObject private var viewModel = MoviesViewModel(getMovies: GetMovies(repository: MoviesRepositoryImpl(remote: MoviesRemoteDataSourceImpl(server: Server()))))
+    @StateObject private var viewModel = AppModules.container.resolve(MoviesViewModel.self)!
     
     var body: some View {
         NavigationView {
