@@ -11,23 +11,24 @@ struct MoviesGrid: View {
     var movies: [Movie]
     
     var body: some View {
-        LazyVGrid(columns: MoviesProperties.gridLayout) {
-            ForEach(self.movies, id: \.id) { item in
-                NavigationLink {
-//                    MovieDetailsPage(movie: item)
-                    Text(item.title)
-                } label: {
-                    MovieItem(movie: item)
-                        .foregroundColor(.primary)
+        ScrollView {
+            LazyVGrid(columns: MoviesProperties.gridLayout) {
+                ForEach(self.movies, id: \.id) { item in
+                    NavigationLink {
+                        Text(item.title)
+                    } label: {
+                        MovieItem(movie: item)
+                            .foregroundColor(.primary)
+                    }
                 }
             }
+            .padding(.top, 10)
         }
-        .padding(.top, 10)
     }
 }
 
-//struct MoviesGrid_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MoviesGrid()
-//    }
-//}
+struct MoviesGrid_Previews: PreviewProvider {
+    static var previews: some View {
+        MoviesGrid(movies: [MovieModel.dumbInstance().toEntity()])
+    }
+}

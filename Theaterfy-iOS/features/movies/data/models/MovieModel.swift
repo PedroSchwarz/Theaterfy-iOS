@@ -25,16 +25,31 @@ struct MovieModel : Model {
         return Movie(
             id: self.id,
             adult: self.adult,
-            backdropUrl: self.backdrop_path != nil ? "\(self.backdrop_path!)" : nil,
+            backdropUrl: self.backdrop_path != nil ? ServerConstants.Images.buildPathforBackDrop(url: self.backdrop_path!) : nil,
             originalTitle: self.original_title,
             overview: self.overview,
-            posterUrl: self.poster_path != nil ? "\(self.poster_path!)" : nil,
+            posterUrl: self.poster_path != nil ? ServerConstants.Images.buildPathforPoster(url: self.poster_path!) : nil,
             releaseDate: self.release_date,
             title: self.title,
             voteAverage: self.vote_average,
             voteCount: self.vote_count,
             watchLater: false,
             favorite: false
+        )
+    }
+    
+    static func dumbInstance() -> MovieModel {
+        return MovieModel(
+            id: 1,
+            adult: false,
+            backdrop_path: nil,
+            original_title: "Movie 1",
+            overview: "Movie 1",
+            poster_path: nil,
+            release_date: "2020-01-01",
+            title: "Movie 1",
+            vote_average: 7.5,
+            vote_count: 900
         )
     }
 }
