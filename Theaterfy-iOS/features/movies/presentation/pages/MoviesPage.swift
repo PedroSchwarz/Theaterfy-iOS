@@ -15,20 +15,14 @@ struct MoviesPage: View {
             VStack {
                 switch viewModel.state {
                 case .Loading:
-                    Spacer()
-                    ProgressView()
-                    Spacer()
+                    LoadingProgress()
                 case .Failure(let error):
-                    Spacer()
-                    Text(error)
-                    Spacer()
+                    ErrorMessage(message: error)
                 case .Success(let results):
-                    List(results) { item in
-                        Text(item.title)
-                    }
+                    MoviesGrid(movies: results)
                 }
             }
-            .navigationTitle("Now Playing")
+            .navigationTitle(RoutesLocales.nowLoadingRouteName)
             .onAppear {
                 viewModel.callGetMovies()
             }

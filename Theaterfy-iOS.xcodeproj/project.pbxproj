@@ -34,6 +34,11 @@
 		342BE008272774C400C7805C /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE007272774C400C7805C /* ServerConstants.swift */; };
 		342BE0162727761B00C7805C /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE0152727761B00C7805C /* MovieModel.swift */; };
 		342BE0182727762400C7805C /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342BE0172727762400C7805C /* PaginationModel.swift */; };
+		34FBFDB9272A11E4003E504C /* LoadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDB8272A11E4003E504C /* LoadingProgress.swift */; };
+		34FBFDBB272A1211003E504C /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDBA272A1211003E504C /* ErrorMessage.swift */; };
+		34FBFDBD272A1265003E504C /* MoviesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDBC272A1265003E504C /* MoviesGrid.swift */; };
+		34FBFDC0272A12FF003E504C /* MoviesProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDBF272A12FF003E504C /* MoviesProperties.swift */; };
+		34FBFDC2272A1348003E504C /* RoutesLocales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDC1272A1348003E504C /* RoutesLocales.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +87,11 @@
 		342BE007272774C400C7805C /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
 		342BE0152727761B00C7805C /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		342BE0172727762400C7805C /* PaginationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
+		34FBFDB8272A11E4003E504C /* LoadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProgress.swift; sourceTree = "<group>"; };
+		34FBFDBA272A1211003E504C /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		34FBFDBC272A1265003E504C /* MoviesGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesGrid.swift; sourceTree = "<group>"; };
+		34FBFDBF272A12FF003E504C /* MoviesProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesProperties.swift; sourceTree = "<group>"; };
+		34FBFDC1272A1348003E504C /* RoutesLocales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesLocales.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +183,7 @@
 		34079DC22728C047008B0C68 /* locales */ = {
 			isa = PBXGroup;
 			children = (
+				34FBFDC1272A1348003E504C /* RoutesLocales.swift */,
 			);
 			path = locales;
 			sourceTree = "<group>";
@@ -196,6 +207,7 @@
 		342BDFF7272772F100C7805C /* app */ = {
 			isa = PBXGroup;
 			children = (
+				34FBFDBE272A12ED003E504C /* properties */,
 				34079DC22728C047008B0C68 /* locales */,
 				342BE006272774B200C7805C /* constants */,
 				342BE005272774A800C7805C /* colors */,
@@ -218,6 +230,7 @@
 		342BDFF9272772FF00C7805C /* features */ = {
 			isa = PBXGroup;
 			children = (
+				34FBFDB5272A11B7003E504C /* common */,
 				342BDFFA2727730700C7805C /* movies */,
 			);
 			path = features;
@@ -348,6 +361,7 @@
 		342BE00F2727755B00C7805C /* components */ = {
 			isa = PBXGroup;
 			children = (
+				34FBFDB4272A1199003E504C /* movies */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -391,6 +405,47 @@
 				342BE0172727762400C7805C /* PaginationModel.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		34FBFDB4272A1199003E504C /* movies */ = {
+			isa = PBXGroup;
+			children = (
+				34FBFDBC272A1265003E504C /* MoviesGrid.swift */,
+			);
+			path = movies;
+			sourceTree = "<group>";
+		};
+		34FBFDB5272A11B7003E504C /* common */ = {
+			isa = PBXGroup;
+			children = (
+				34FBFDB6272A11BF003E504C /* presentation */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		34FBFDB6272A11BF003E504C /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				34FBFDB7272A11CC003E504C /* components */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		34FBFDB7272A11CC003E504C /* components */ = {
+			isa = PBXGroup;
+			children = (
+				34FBFDB8272A11E4003E504C /* LoadingProgress.swift */,
+				34FBFDBA272A1211003E504C /* ErrorMessage.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		34FBFDBE272A12ED003E504C /* properties */ = {
+			isa = PBXGroup;
+			children = (
+				34FBFDBF272A12FF003E504C /* MoviesProperties.swift */,
+			);
+			path = properties;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,12 +587,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				34079DAA2728A8FE008B0C68 /* Server.swift in Sources */,
+				34FBFDC0272A12FF003E504C /* MoviesProperties.swift in Sources */,
 				34079DBD2728B226008B0C68 /* MoviesRemoteDataSource.swift in Sources */,
+				34FBFDBB272A1211003E504C /* ErrorMessage.swift in Sources */,
 				34079DB72728ADA7008B0C68 /* MoviesRepository.swift in Sources */,
 				34079DB52728ACF3008B0C68 /* GetMovies.swift in Sources */,
 				340018B0272639DE00420C9B /* Theaterfy_iOS.xcdatamodeld in Sources */,
+				34FBFDB9272A11E4003E504C /* LoadingProgress.swift in Sources */,
 				34079DBB2728B1C2008B0C68 /* MoviesRepositoryImpl.swift in Sources */,
 				340018AD272639DE00420C9B /* Persistence.swift in Sources */,
+				34FBFDC2272A1348003E504C /* RoutesLocales.swift in Sources */,
 				34079DB92728B06D008B0C68 /* Pagination.swift in Sources */,
 				34079DB12728ABF3008B0C68 /* Model.swift in Sources */,
 				342BE0042727747000C7805C /* AppColors.swift in Sources */,
@@ -546,6 +605,7 @@
 				34079DB32728AC8D008B0C68 /* Movie.swift in Sources */,
 				34079DBF2728BA5A008B0C68 /* MoviesPage.swift in Sources */,
 				342BE0162727761B00C7805C /* MovieModel.swift in Sources */,
+				34FBFDBD272A1265003E504C /* MoviesGrid.swift in Sources */,
 				342BE002272773B800C7805C /* Failure.swift in Sources */,
 				342BE008272774C400C7805C /* ServerConstants.swift in Sources */,
 				34079DC82728CC5A008B0C68 /* AppModules.swift in Sources */,
