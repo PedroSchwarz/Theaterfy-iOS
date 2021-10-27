@@ -39,6 +39,7 @@
 		34FBFDBD272A1265003E504C /* MoviesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDBC272A1265003E504C /* MoviesGrid.swift */; };
 		34FBFDC0272A12FF003E504C /* MoviesProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDBF272A12FF003E504C /* MoviesProperties.swift */; };
 		34FBFDC2272A1348003E504C /* RoutesLocales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDC1272A1348003E504C /* RoutesLocales.swift */; };
+		34FBFDC5272A1484003E504C /* MovieItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDC4272A1484003E504C /* MovieItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		34FBFDBC272A1265003E504C /* MoviesGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesGrid.swift; sourceTree = "<group>"; };
 		34FBFDBF272A12FF003E504C /* MoviesProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesProperties.swift; sourceTree = "<group>"; };
 		34FBFDC1272A1348003E504C /* RoutesLocales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesLocales.swift; sourceTree = "<group>"; };
+		34FBFDC4272A1484003E504C /* MovieItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,6 +412,7 @@
 		34FBFDB4272A1199003E504C /* movies */ = {
 			isa = PBXGroup;
 			children = (
+				34FBFDC3272A1479003E504C /* item */,
 				34FBFDBC272A1265003E504C /* MoviesGrid.swift */,
 			);
 			path = movies;
@@ -446,6 +449,14 @@
 				34FBFDBF272A12FF003E504C /* MoviesProperties.swift */,
 			);
 			path = properties;
+			sourceTree = "<group>";
+		};
+		34FBFDC3272A1479003E504C /* item */ = {
+			isa = PBXGroup;
+			children = (
+				34FBFDC4272A1484003E504C /* MovieItem.swift */,
+			);
+			path = item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -597,6 +608,7 @@
 				34079DBB2728B1C2008B0C68 /* MoviesRepositoryImpl.swift in Sources */,
 				340018AD272639DE00420C9B /* Persistence.swift in Sources */,
 				34FBFDC2272A1348003E504C /* RoutesLocales.swift in Sources */,
+				34FBFDC5272A1484003E504C /* MovieItem.swift in Sources */,
 				34079DB92728B06D008B0C68 /* Pagination.swift in Sources */,
 				34079DB12728ABF3008B0C68 /* Model.swift in Sources */,
 				342BE0042727747000C7805C /* AppColors.swift in Sources */,

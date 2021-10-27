@@ -17,7 +17,7 @@ struct MoviesGrid: View {
 //                    MovieDetailsPage(movie: item)
                     Text(item.title)
                 } label: {
-                    Text(item.title)
+                    MovieItem(movie: item)
                         .foregroundColor(.primary)
                 }
             }
