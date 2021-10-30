@@ -15,4 +15,7 @@ struct MoviesLocales {
     static let revenueOf = "Revenue of"
     static let budgetOf = "Budget of"
     static let profitOf = "Profit of"
+    
+    static let ratedBy = "Rated by"
+    static let users = "Users"
 }

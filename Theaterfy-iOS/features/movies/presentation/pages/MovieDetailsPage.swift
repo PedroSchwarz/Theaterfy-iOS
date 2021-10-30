@@ -39,7 +39,10 @@ struct MovieDetailsPage: View {
                 }
                 .padding(.horizontal)
                 
-                MovieDetailsContent(state: viewModel.state)
+                MovieDetailsContent(
+                    movie: movie,
+                    state: viewModel.state
+                )
                 
                 Spacer()
             }

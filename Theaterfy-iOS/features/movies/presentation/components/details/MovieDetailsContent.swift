@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MovieDetailsContent: View {
+    var movie: Movie
     var state: MovieDetailsState
     
     var body: some View {
@@ -29,6 +30,11 @@ struct MovieDetailsContent: View {
                         budget: result.budget,
                         profit: result.profit
                     )
+                    
+                    MovieDetailsVotes(
+                        average: movie.voteAverage,
+                        total: movie.voteCount
+                    )
                 }
                 .padding(.horizontal)
             }
@@ -38,6 +44,6 @@ struct MovieDetailsContent: View {
 
 struct MovieDetailsContent_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailsContent(state: .Loading)
+        MovieDetailsContent(movie: MovieModel.dumbInstance().toEntity(), state: .Loading)
     }
 }
