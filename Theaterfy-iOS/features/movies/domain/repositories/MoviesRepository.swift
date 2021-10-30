@@ -10,4 +10,5 @@ import Combine
 
 protocol MoviesRepository {
     func getMovies(_ page: Int) -> AnyPublisher<[Movie], Failure>
+    func getMovieDetails(_ id: Int) -> AnyPublisher<MovieDetails, Failure>
 }
