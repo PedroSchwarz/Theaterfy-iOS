@@ -15,7 +15,7 @@ struct MoviesGrid: View {
             LazyVGrid(columns: MoviesProperties.gridLayout) {
                 ForEach(self.movies, id: \.id) { item in
                     NavigationLink {
-                        Text(item.title)
+                        MovieDetailsPage(movie: item)
                     } label: {
                         MovieItem(movie: item)
                             .foregroundColor(.primary)
