@@ -25,7 +25,7 @@ struct MovieItem: View {
                 .padding(10)
                 .lineLimit(1)
                 .multilineTextAlignment(.leading)
-                
+                // Movie Extra Info
                 MovieItemExtras(
                     votes: self.movie.voteAverage,
                     releaseDate: self.movie.releaseDate

@@ -17,7 +17,7 @@ struct MovieItemExtras: View {
             
             Spacer()
             
-            Text(dateFormatterFromString(from: self.releaseDate))
+            Text(self.releaseDate)
                 .font(.body)
                 .fontWeight(.light)
                 .multilineTextAlignment(.leading)
