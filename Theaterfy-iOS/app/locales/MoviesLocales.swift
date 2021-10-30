@@ -9,4 +9,6 @@ import Foundation
 
 struct MoviesLocales {
     static let releasedOn = "Released on"
+    static let runtimeOf = "Runtime of"
+    static let learnMoreHere = "Learn more here"
 }

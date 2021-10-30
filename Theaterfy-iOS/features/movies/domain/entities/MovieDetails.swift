@@ -13,5 +13,5 @@ struct MovieDetails {
     var homepage: String?
     var productionCompanies: [ProductionCompany]
     var revenue: Int
-    var runtime: Int?
+    var runtime: String
 }

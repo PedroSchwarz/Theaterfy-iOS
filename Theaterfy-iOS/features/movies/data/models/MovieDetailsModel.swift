@@ -27,7 +27,7 @@ struct MovieDetailsModel : Model {
             homepage: self.homepage,
             productionCompanies: companies,
             revenue: self.revenue,
-            runtime: self.runtime ?? 0
+            runtime: minutesToHours(runtime: 0)
         )
     }
     

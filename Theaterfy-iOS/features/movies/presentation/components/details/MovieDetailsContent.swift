@@ -17,7 +17,15 @@ struct MovieDetailsContent: View {
         case .Failure(let error):
             ErrorMessage(message: error)
         case .Success(let result):
-            Text("Success")
+            VStack {
+                VStack(spacing: 20) {
+                    MovieDetailsInfo(
+                        runtime: result.runtime,
+                        homepage: result.homepage
+                    )
+                }
+                .padding(.horizontal)
+            }
         }
     }
 }
