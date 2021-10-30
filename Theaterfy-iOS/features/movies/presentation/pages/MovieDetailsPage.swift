@@ -10,11 +10,16 @@ import SwiftUI
 struct MovieDetailsPage: View {
     var movie: Movie
     
+    @StateObject private var viewModel = AppModules.container.resolve(MovieDetailsViewModel.self)!
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
-                Text(movie.title)
+                MovieDetailsCarousel(images: [movie.posterUrl, movie.backdropUrl], size: 400)
             }
+        }
+        .onAppear {
+            viewModel.callGetMovieDetails(movie.id)
         }
     }
 }

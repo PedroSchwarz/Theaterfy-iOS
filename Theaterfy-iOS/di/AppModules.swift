@@ -29,5 +29,8 @@ struct AppModules {
         
         // ViewModels
         container.register(MoviesViewModel.self) { r in MoviesViewModel(getMovies: r.resolve(GetMovies.self)!) }
+        container.register(MovieDetailsViewModel.self) { r in
+            MovieDetailsViewModel(getMovieDetails: r.resolve(GetMovieDetails.self)!)
+        }
     }
 }

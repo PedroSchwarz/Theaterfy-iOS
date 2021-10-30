@@ -1,26 +1,26 @@
 //
-//  MoviesViewModel.swift
+//  MovieDetailsViewModel.swift
 //  Theaterfy-iOS
 //
-//  Created by Pedro Rodrigues on 26/10/21.
+//  Created by Pedro Rodrigues on 30/10/21.
 //
 
 import Foundation
 import Combine
 
-class MoviesViewModel : ObservableObject {
-    private var getMovies: GetMovies
+class MovieDetailsViewModel : ObservableObject {
+    private var getMovieDetails: GetMovieDetails
     
-    @Published var state: MoviesState = .Loading
+    @Published var state: MovieDetailsState = .Loading
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(getMovies: GetMovies) {
-        self.getMovies = getMovies
+    init(getMovieDetails: GetMovieDetails) {
+        self.getMovieDetails = getMovieDetails
     }
     
-    func callGetMovies() {
-        getMovies.execute(params: GetMoviesParams(page: 1))
+    func callGetMovieDetails(_ id: Int) {
+        getMovieDetails.execute(params: GetMovieDetailsParams(id: id))
             .sink { completion in
                 switch completion {
                 case .finished:
@@ -28,7 +28,7 @@ class MoviesViewModel : ObservableObject {
                 case .failure(let failure):
                     self.state = .Failure(error: self.mapFailureToMessage(failure: failure))
                 }
-            } receiveValue: { self.state = .Success(results: $0) }
+            } receiveValue: { self.state = .Success(result: $0) }
             .store(in: &cancellables)
     }
     
@@ -42,8 +42,9 @@ class MoviesViewModel : ObservableObject {
     }
 }
 
-enum MoviesState {
+enum MovieDetailsState {
     case Loading
-    case Success(results: [Movie])
+    case Success(result: MovieDetails)
     case Failure(error: String)
 }
+
