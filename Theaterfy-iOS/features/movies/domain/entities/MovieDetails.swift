@@ -8,10 +8,11 @@
 import Foundation
 
 struct MovieDetails {
-    var budget: Int
+    var budget: String
     var genres: [Genre]
     var homepage: String?
     var productionCompanies: [ProductionCompany]
-    var revenue: Int
+    var revenue: String
     var runtime: String
+    var profit: String
 }

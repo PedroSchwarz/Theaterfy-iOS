@@ -23,6 +23,12 @@ struct MovieDetailsContent: View {
                         runtime: result.runtime,
                         homepage: result.homepage
                     )
+                    
+                    MovieDetailsProfit(
+                        revenue: result.revenue,
+                        budget: result.budget,
+                        profit: result.profit
+                    )
                 }
                 .padding(.horizontal)
             }

@@ -22,12 +22,13 @@ struct MovieDetailsModel : Model {
         let companies = self.production_companies.map { $0.toEntity() }
         
         return MovieDetails(
-            budget: self.budget,
+            budget: formatCurrency(amount: self.budget),
             genres: genres,
             homepage: self.homepage,
             productionCompanies: companies,
-            revenue: self.revenue,
-            runtime: minutesToHours(runtime: 0)
+            revenue: formatCurrency(amount: self.revenue),
+            runtime: minutesToHours(runtime: 0),
+            profit: formatCurrency(amount: self.revenue - self.budget)
         )
     }
     
