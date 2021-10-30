@@ -14,10 +14,37 @@ struct MovieDetailsPage: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack {
-                MovieDetailsCarousel(images: [movie.posterUrl, movie.backdropUrl], size: 400)
+            VStack(spacing: 20) {
+                MovieDetailsCarousel(
+                    images: [movie.posterUrl, movie.backdropUrl],
+                    size: 400
+                )
+                
+                VStack(alignment: .leading, spacing: 20) {
+                    Text(self.movie.title)
+                        .font(.title)
+                        .bold()
+                    
+                    HStack {
+                        Text(MoviesLocales.releasedOn)
+                            .font(.subheadline)
+                        Text(self.movie.releaseDate)
+                            .foregroundColor(.accentColor)
+                        
+                        Spacer()
+                    }
+                    
+                    Text(self.movie.overview)
+                        .font(.title2)
+                }
+                .padding(.horizontal)
+                
+                MovieDetailsContent(state: viewModel.state)
+                
+                Spacer()
             }
         }
+        .edgesIgnoringSafeArea(.top)
         .onAppear {
             viewModel.callGetMovieDetails(movie.id)
         }
