@@ -25,6 +25,7 @@ struct AppModules {
         
         // UseCases
         container.register(GetMovies.self) { r in GetMovies(repository: r.resolve(MoviesRepository.self)!) }
+        container.register(GetMovieDetails.self) { r in GetMovieDetails(repository: r.resolve(MoviesRepository.self)!) }
         
         // ViewModels
         container.register(MoviesViewModel.self) { r in MoviesViewModel(getMovies: r.resolve(GetMovies.self)!) }

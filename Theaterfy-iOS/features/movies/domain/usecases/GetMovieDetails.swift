@@ -15,8 +15,7 @@ struct GetMovieDetails : UseCase {
     var repository: MoviesRepository
     
     func execute(params: GetMovieDetailsParams) -> AnyPublisher<MovieDetails, Failure> {
-//        return repository.getMovies(params.page).eraseToAnyPublisher()
-        return Result.Publisher(Failure.ServerFailure(error: "Not implemented")).eraseToAnyPublisher()
+        return repository.getMovieDetails(params.id).eraseToAnyPublisher()
     }
 }
 

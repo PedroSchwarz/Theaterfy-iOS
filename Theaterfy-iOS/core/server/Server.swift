@@ -24,7 +24,6 @@ struct Server {
             .mapError({
                 error in
                 return Failure.ServerFailure(error: error.localizedDescription)
-                
             })
             .eraseToAnyPublisher()
     }
