@@ -13,16 +13,22 @@ struct MovieDetailsProfit: View {
     var profit: String
     
     var body: some View {
-        VStack(alignment: .center) {
-            Divider()
-            VStack(alignment: .leading, spacing: 20) {
-                MovieDetailsProfitItem(label: MoviesLocales.budgetOf, amount: budget)
-                MovieDetailsProfitItem(label: MoviesLocales.revenueOf, amount: revenue)
-                MovieDetailsProfitItem(label: MoviesLocales.profitOf, amount: profit)
+        DisclosureGroup {
+            VStack(alignment: .center) {
+                Divider()
+                
+                VStack(alignment: .leading, spacing: 20) {
+                    MovieDetailsProfitItem(label: MoviesLocales.budgetOf, amount: budget)
+                    MovieDetailsProfitItem(label: MoviesLocales.revenueOf, amount: revenue)
+                    MovieDetailsProfitItem(label: MoviesLocales.profitOf, amount: profit)
+                }
+                .padding(.vertical)
             }
-            .padding()
+            .padding(.top, 20)
+        } label: {
+            SectionHeader(icon: MoviesIcons.profit, label: MoviesLocales.profit)
         }
-        .padding(.top, 30)
+        .padding(.top, 10)
     }
 }
 

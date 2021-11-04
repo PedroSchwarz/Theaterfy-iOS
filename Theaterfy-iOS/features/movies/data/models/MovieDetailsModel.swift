@@ -27,7 +27,7 @@ struct MovieDetailsModel : Model {
             homepage: self.homepage,
             productionCompanies: companies,
             revenue: formatCurrency(amount: self.revenue),
-            runtime: minutesToHours(runtime: 0),
+            runtime: minutesToHours(runtime: self.runtime ?? 0),
             profit: formatCurrency(amount: self.revenue - self.budget)
         )
     }

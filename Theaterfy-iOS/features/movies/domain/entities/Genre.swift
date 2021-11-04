@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Genre {
+struct Genre : Identifiable {
     var id: Int
     var name: String
 }

@@ -37,6 +37,10 @@ struct MovieDetailsContent: View {
                     )
                 }
                 .padding(.horizontal)
+                
+                MovieDetailsGenres(genres: result.genres)
+                
+                MovieDetailsCompanies(companies: result.productionCompanies)
             }
         }
     }

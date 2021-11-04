@@ -13,7 +13,7 @@ struct MovieItemExtras: View {
     
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
-            Text(String(self.votes))
+            MoviesScore(size: 40, value: votes)
             
             Spacer()
             

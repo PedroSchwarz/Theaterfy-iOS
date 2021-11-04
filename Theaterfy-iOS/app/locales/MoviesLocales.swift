@@ -18,4 +18,10 @@ struct MoviesLocales {
     
     static let ratedBy = "Rated by"
     static let users = "Users"
+    
+    static let popularity = "Popularity"
+    static let profit = "Profit"
+    
+    static let productionCompanies = "Production Companies"
+    static let genres = "Movie Genres"
 }

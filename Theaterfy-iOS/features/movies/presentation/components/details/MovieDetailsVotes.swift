@@ -12,28 +12,32 @@ struct MovieDetailsVotes: View {
     var total: Int
     
     var body: some View {
-        VStack {
-            Divider()
-            
-            HStack(spacing: 30) {
-                Text(String(average))
-                    .font(.largeTitle)
+        DisclosureGroup {
+            VStack {
+                Divider()
                 
-                
-                VStack(alignment: .leading) {
-                    Text("Rated by")
-                        .font(.title3)
-                    Text("\(total) \(MoviesLocales.users)")
-                        .font(.largeTitle)
-                        .bold()
-                        .foregroundColor(.accentColor)
+                HStack(spacing: 30) {
+                    MoviesScore(size: 100, value: average, showAnimation: true)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        Text(MoviesLocales.ratedBy)
+                            .font(.title3)
+                        Text("\(total) \(MoviesLocales.users)")
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(.accentColor)
+                    }
+                    
+                    Spacer()
                 }
-                
-                Spacer()
+                .padding()
             }
-            .padding()
+            .padding(.top, 20)
+        } label: {
+            SectionHeader(icon: MoviesIcons.popularity, label: MoviesLocales.popularity)
         }
-        .padding(.top, 30)
+        .padding(.top, 10)
     }
 }
 

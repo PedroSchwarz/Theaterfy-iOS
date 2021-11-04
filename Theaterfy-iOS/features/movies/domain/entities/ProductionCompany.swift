@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductionCompany {
+struct ProductionCompany : Identifiable {
     var id: Int
     var name: String
 }
