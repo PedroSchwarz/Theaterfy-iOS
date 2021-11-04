@@ -11,6 +11,7 @@ import Combine
 protocol MoviesRemoteDataSource {
     func getMovies(_ page: Int) -> AnyPublisher<[MovieModel], Failure>
     func getMovieDetails(_ id: Int) -> AnyPublisher<MovieDetailsModel, Failure>
+    func getMovieRecommendations(_ id: Int) -> AnyPublisher<[MovieModel], Failure>
 }
 
 struct MoviesRemoteDataSourceImpl : MoviesRemoteDataSource {
@@ -24,7 +25,7 @@ struct MoviesRemoteDataSourceImpl : MoviesRemoteDataSource {
             .map({ result in
                 result.results
             })
-        .eraseToAnyPublisher()
+            .eraseToAnyPublisher()
     }
     
     func getMovieDetails(_ id: Int) -> AnyPublisher<MovieDetailsModel, Failure> {
@@ -32,6 +33,17 @@ struct MoviesRemoteDataSourceImpl : MoviesRemoteDataSource {
             path: ServerConstants.buildPath(path: "\(ServerConstants.GetMovieDetails.PATH)\(id)"),
             decodable: MovieDetailsModel.self
         )
-        .eraseToAnyPublisher()
+            .eraseToAnyPublisher()
+    }
+    
+    func getMovieRecommendations(_ id: Int) -> AnyPublisher<[MovieModel], Failure> {
+        return server.execute(
+            path: ServerConstants.buildPath(path:"\(ServerConstants.GetMovieDetails.PATH)\(id)\(ServerConstants.GetMovieRecommendations.PATH)"),
+            decodable: PaginationModel<MovieModel>.self
+        )
+            .map({ result in
+                result.results
+            })
+            .eraseToAnyPublisher()
     }
 }

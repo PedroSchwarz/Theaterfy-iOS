@@ -33,6 +33,10 @@ struct ServerConstants {
         static let PATH = "/movie/"
     }
     
+    struct GetMovieRecommendations {
+        static let PATH = "/recommendations"
+    }
+    
     static func buildPath(base: String = ServerConstants.BASE_URL, path: String, query: String? = nil) -> String {
         var builtQuery: String = "?api_key=\(ServerConstants.API_KEY)"
         

@@ -24,4 +24,12 @@ struct MoviesRepositoryImpl : MoviesRepository {
             .map({ $0.toEntity() })
             .eraseToAnyPublisher()
     }
+    
+    func getMovieRecommendations(_ id: Int) -> AnyPublisher<[Movie], Failure> {
+        return remote.getMovieRecommendations(id)
+            .map { result in
+                result.map { $0.toEntity() }
+            }
+            .eraseToAnyPublisher()
+    }
 }
