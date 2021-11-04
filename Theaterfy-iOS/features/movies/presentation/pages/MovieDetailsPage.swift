@@ -21,20 +21,20 @@ struct MovieDetailsPage: View {
                 )
                 
                 VStack(alignment: .leading, spacing: 20) {
-                    Text(self.movie.title)
+                    Text(movie.title)
                         .font(.title)
                         .bold()
                     
                     HStack {
                         Text(MoviesLocales.releasedOn)
                             .font(.subheadline)
-                        Text(self.movie.releaseDate)
+                        Text(movie.releaseDate)
                             .foregroundColor(.accentColor)
                         
                         Spacer()
                     }
                     
-                    Text(self.movie.overview)
+                    Text(movie.overview)
                         .font(.title2)
                 }
                 .padding(.horizontal)
@@ -43,6 +43,8 @@ struct MovieDetailsPage: View {
                     movie: movie,
                     state: viewModel.state
                 )
+                
+                MovieDetailsRecommendations(state: viewModel.recommendationsState)
                 
                 Spacer()
             }

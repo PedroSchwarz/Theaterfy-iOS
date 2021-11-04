@@ -24,4 +24,6 @@ struct MoviesLocales {
     
     static let productionCompanies = "Production Companies"
     static let genres = "Movie Genres"
+    
+    static let recommendations = "Recommendations"
 }
