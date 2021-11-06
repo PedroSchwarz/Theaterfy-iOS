@@ -12,18 +12,25 @@ class MovieDetailsViewModel : ObservableObject {
     private var getMovieDetails: GetMovieDetails
     private var getMovieRecommendations: GetMovieRecommendations
     private var getMovieActions: GetMovieActions
+    private var toggleMovieAction: ToggleMovieAction
     
     @Published var state: MovieDetailsState = .Loading
     @Published var recommendationsState: MovieDetailsRecommendationsState = .Loading
-    @Published var actionsState: MovieDetailsActionsState = .Done(result: (false, false))
-    
+    @Published var watchLater: Bool = false
+    @Published var favorite: Bool = false
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(getMovieDetails: GetMovieDetails, getMovieRecommendations: GetMovieRecommendations, getMovieActions: GetMovieActions) {
+    init(
+        getMovieDetails: GetMovieDetails,
+        getMovieRecommendations: GetMovieRecommendations,
+        getMovieActions: GetMovieActions,
+        toggleMovieAction: ToggleMovieAction
+    ) {
         self.getMovieDetails = getMovieDetails
         self.getMovieRecommendations = getMovieRecommendations
         self.getMovieActions = getMovieActions
+        self.toggleMovieAction = toggleMovieAction
     }
     
     func callGetMovieDetails(_ id: Int) {
@@ -55,11 +62,39 @@ class MovieDetailsViewModel : ObservableObject {
                 case .finished:
                     break
                 case .failure(_):
-                    self.actionsState = .Done(result: (false, false))
+                    self.watchLater = false
+                    self.favorite = false
                 }
             } receiveValue: { result in
-                self.actionsState = .Done(result: result)
+                self.watchLater = result.0
+                self.favorite = result.1
             }
+            .store(in: &cancellables)
+    }
+    
+    func callToggleMovieAction(movie: Movie, type: MovieActionType) {
+        switch type {
+        case .FavoriteAction:
+            self.favorite.toggle()
+        case .WatchLaterAction:
+            self.watchLater.toggle()
+        }
+        
+        self.toggleMovieAction.execute(params: ToggleMovieActionParams(movie: movie, type: type))
+            .sink { completion in
+                switch (completion) {
+                case .failure(_):
+                    switch type {
+                    case .FavoriteAction:
+                        self.favorite.toggle()
+                    case .WatchLaterAction:
+                        self.watchLater.toggle()
+                    }
+                    break
+                case .finished:
+                    break
+                }
+            } receiveValue: { _ in }
             .store(in: &cancellables)
     }
     
@@ -83,8 +118,4 @@ enum MovieDetailsRecommendationsState {
     case Loading
     case Success(result: [Movie])
     case Failure(error: String)
-}
-
-enum MovieDetailsActionsState {
-    case Done(result: (Bool, Bool))
 }

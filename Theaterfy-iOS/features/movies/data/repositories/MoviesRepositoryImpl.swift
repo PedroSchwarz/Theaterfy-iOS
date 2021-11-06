@@ -49,4 +49,16 @@ struct MoviesRepositoryImpl : MoviesRepository {
                 .eraseToAnyPublisher()
         }
     }
+    
+    func toggleMovieAction(movie: Movie, type: MovieActionType) -> AnyPublisher<Void, Failure> {
+        do {
+            try local.toggleMovieAction(movie: movie, type: type)
+            return Result.Publisher(()).eraseToAnyPublisher()
+        } catch let error as Failure {
+            return Result.Publisher(error).eraseToAnyPublisher()
+        } catch {
+            return Result.Publisher(Failure.CacheFailure(error: error.localizedDescription))
+                .eraseToAnyPublisher()
+        }
+    }
 }

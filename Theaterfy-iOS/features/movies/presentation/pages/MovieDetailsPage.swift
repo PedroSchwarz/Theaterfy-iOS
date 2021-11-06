@@ -33,9 +33,13 @@ struct MovieDetailsPage: View {
                         
                         Spacer()
                         
-                        switch viewModel.actionsState {
-                        case .Done(let result):
-                            MovieDetailsActions(watchLater: result.0, favorite: result.1)
+                        MovieDetailsActions(
+                            watchLater: viewModel.watchLater,
+                            favorite: viewModel.favorite
+                        ) {
+                            viewModel.callToggleMovieAction(movie: movie, type: .WatchLaterAction)
+                        } onFavorite: {
+                            viewModel.callToggleMovieAction(movie: movie, type: .FavoriteAction)
                         }
                     }
                     

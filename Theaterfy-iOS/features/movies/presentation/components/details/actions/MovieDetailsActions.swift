@@ -10,29 +10,31 @@ import SwiftUI
 struct MovieDetailsActions: View {
     var watchLater: Bool
     var favorite: Bool
+    var onWatchLater: () -> Void
+    var onFavorite: () -> Void
     
     var body: some View {
         HStack(spacing: 10) {
             Button {
-                print("Watch Later")
+                onWatchLater()
             } label: {
-                Image(systemName: watchLater ? MoviesIcons.unwatchLater : MoviesIcons.watchLater)
+                Image(systemName: watchLater ? MoviesIcons.watchLater : MoviesIcons.unwatchLater)
                     .padding(10)
                     .background(Circle().stroke(lineWidth: 2).fill(CommonColors.WatchLaterColor))
                     .foregroundColor(CommonColors.WatchLaterColor)
                     .opacity(watchLater ? 1 : 0.5)
-                    .animation(.easeOut(duration: 5), value: watchLater)
+                    .animation(.easeOut(duration: 1), value: watchLater)
             }
             
             Button {
-                print("Favorite")
+                onFavorite()
             } label: {
-                Image(systemName: favorite ? MoviesIcons.unfavorite : MoviesIcons.favorite)
+                Image(systemName: favorite ? MoviesIcons.favorite : MoviesIcons.unfavorite)
                     .padding(10)
                     .background(Circle().stroke(lineWidth: 2).fill(CommonColors.FavoriteColor))
                     .foregroundColor(CommonColors.FavoriteColor)
                     .opacity(favorite ? 1 : 0.5)
-                    .animation(.easeOut(duration: 5), value: favorite)
+                    .animation(.easeOut(duration: 1), value: favorite)
             }
         }
     }
