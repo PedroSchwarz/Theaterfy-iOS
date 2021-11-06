@@ -11,6 +11,7 @@ import CoreData
 protocol MoviesLocalDataSource {
     func getCachedMovie(_ id: Int) throws -> MovieCore?
     func toggleMovieAction(movie: Movie, type: MovieActionType) throws -> Void
+    func getMoviesByAction(_ type: MovieActionType) throws -> [MovieCore]?
 }
 
 struct MoviesLocalDataSourceImpl : MoviesLocalDataSource {
@@ -54,6 +55,20 @@ struct MoviesLocalDataSourceImpl : MoviesLocalDataSource {
                 
                 try self.viewContext.save()
             }
+        } catch {
+            throw Failure.CacheFailure(error: error.localizedDescription)
+        }
+    }
+    
+    func getMoviesByAction(_ type: MovieActionType) throws -> [MovieCore]? {
+        let request: NSFetchRequest<MovieCore> = MovieCore.fetchRequest()
+        let filter = type == .FavoriteAction ? "favorite == YES" : "watch_later == YES"
+        let predicate = NSPredicate(format: filter)
+        request.predicate = predicate
+        
+        do {
+            let results: [MovieCore] = try viewContext.fetch(request)
+            return results
         } catch {
             throw Failure.CacheFailure(error: error.localizedDescription)
         }

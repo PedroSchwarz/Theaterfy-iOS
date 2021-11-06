@@ -61,4 +61,23 @@ struct MoviesRepositoryImpl : MoviesRepository {
                 .eraseToAnyPublisher()
         }
     }
+    
+    func getMoviesByAction(_ type: MovieActionType) -> AnyPublisher<[Movie], Failure> {
+        do {
+            let results = try local.getMoviesByAction(type)
+            if let localMovies = results {
+                let movies = localMovies.map { MovieCoreData.toEntity(movieCore: $0) }
+                return Result.Publisher(movies)
+                    .eraseToAnyPublisher()
+            } else {
+                return Result.Publisher([])
+                    .eraseToAnyPublisher()
+            }
+        } catch let error as Failure {
+            return Result.Publisher(error).eraseToAnyPublisher()
+        } catch {
+            return Result.Publisher(Failure.CacheFailure(error: error.localizedDescription))
+                .eraseToAnyPublisher()
+        }
+    }
 }

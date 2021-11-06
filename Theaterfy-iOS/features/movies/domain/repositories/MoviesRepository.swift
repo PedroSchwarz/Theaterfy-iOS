@@ -14,4 +14,5 @@ protocol MoviesRepository {
     func getMovieRecommendations(_ id: Int) -> AnyPublisher<[Movie], Failure>
     func getMovieActions(_ id: Int) -> AnyPublisher<(Bool, Bool), Failure>
     func toggleMovieAction(movie: Movie, type: MovieActionType) -> AnyPublisher<Void, Failure>
+    func getMoviesByAction(_ type: MovieActionType) -> AnyPublisher<[Movie], Failure>
 }
