@@ -32,6 +32,11 @@ struct MovieDetailsPage: View {
                             .foregroundColor(.accentColor)
                         
                         Spacer()
+                        
+                        switch viewModel.actionsState {
+                        case .Done(let result):
+                            MovieDetailsActions(watchLater: result.0, favorite: result.1)
+                        }
                     }
                     
                     Text(movie.overview)

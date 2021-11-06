@@ -12,4 +12,5 @@ protocol MoviesRepository {
     func getMovies(_ page: Int) -> AnyPublisher<[Movie], Failure>
     func getMovieDetails(_ id: Int) -> AnyPublisher<MovieDetails, Failure>
     func getMovieRecommendations(_ id: Int) -> AnyPublisher<[Movie], Failure>
+    func getMovieActions(_ id: Int) -> AnyPublisher<(Bool, Bool), Failure>
 }

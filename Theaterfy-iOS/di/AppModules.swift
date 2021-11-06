@@ -19,11 +19,14 @@ struct AppModules {
         
         // DataSources
         container.register(MoviesRemoteDataSource.self) { r in MoviesRemoteDataSourceImpl(server: r.resolve(Server.self)!) }
+        container.register(MoviesLocalDataSource.self) { r in MoviesLocalDataSourceImpl(viewContext: r.resolve(NSManagedObjectContext.self)!) }
         
         // Repositories
         container.register(MoviesRepository.self) { r in
-            MoviesRepositoryImpl(remote: r.resolve(MoviesRemoteDataSource.self)!)
-            
+            MoviesRepositoryImpl(
+                remote: r.resolve(MoviesRemoteDataSource.self)!,
+                local: r.resolve(MoviesLocalDataSource.self)!
+            )
         }
         
         // UseCases
@@ -32,13 +35,15 @@ struct AppModules {
         container.register(GetMovieRecommendations.self) { r in
             GetMovieRecommendations(repository: r.resolve(MoviesRepository.self)!)
         }
+        container.register(GetMovieActions.self) { r in GetMovieActions(repository: r.resolve(MoviesRepository.self)!) }
         
         // ViewModels
         container.register(MoviesViewModel.self) { r in MoviesViewModel(getMovies: r.resolve(GetMovies.self)!) }
         container.register(MovieDetailsViewModel.self) { r in
             MovieDetailsViewModel(
                 getMovieDetails: r.resolve(GetMovieDetails.self)!,
-                getMovieRecommendations: r.resolve(GetMovieRecommendations.self)!
+                getMovieRecommendations: r.resolve(GetMovieRecommendations.self)!,
+                getMovieActions: r.resolve(GetMovieActions.self)!
             )
         }
     }
