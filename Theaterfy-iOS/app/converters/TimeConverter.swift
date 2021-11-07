@@ -7,6 +7,8 @@
 
 import Foundation
 
-func minutesToHours(runtime: Int) -> String {
-    return "\(runtime / 60)h \(runtime % 60)min"
+extension Int {
+    func hoursFormat() -> String {
+        return "\(self / 60)h \(self % 60)min"
+    }
 }

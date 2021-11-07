@@ -11,7 +11,7 @@ import Combine
 class CachedMoviesViewModel : ObservableObject {
     private var getMoviesByAction: GetMoviesByAction
     
-    @Published var state: CachedMoviesState = .Loading
+    @Published private(set) var state: CachedMoviesState = .Loading
     
     private var cancellables = Set<AnyCancellable>()
     

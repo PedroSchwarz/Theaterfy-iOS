@@ -14,10 +14,10 @@ class MovieDetailsViewModel : ObservableObject {
     private var getMovieActions: GetMovieActions
     private var toggleMovieAction: ToggleMovieAction
     
-    @Published var state: MovieDetailsState = .Loading
-    @Published var recommendationsState: MovieDetailsRecommendationsState = .Loading
-    @Published var watchLater: Bool = false
-    @Published var favorite: Bool = false
+    @Published private(set) var state: MovieDetailsState = .Loading
+    @Published private(set) var recommendationsState: MovieDetailsRecommendationsState = .Loading
+    @Published private(set) var watchLater: Bool = false
+    @Published private(set) var favorite: Bool = false
     
     private var cancellables = Set<AnyCancellable>()
     

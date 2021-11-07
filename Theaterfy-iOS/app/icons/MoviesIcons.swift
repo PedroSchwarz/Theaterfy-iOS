@@ -18,4 +18,5 @@ struct MoviesIcons {
     static let unwatchLater = "bookmark"
     static let favorite = "heart.fill"
     static let unfavorite = "heart"
+    static let search = "magnifyingglass"
 }

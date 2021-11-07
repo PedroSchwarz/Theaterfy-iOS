@@ -11,7 +11,7 @@ import Combine
 class MoviesViewModel : ObservableObject {
     private var getMovies: GetMovies
     
-    @Published var state: MoviesState = .Loading
+    @Published private(set) var state: MoviesState = .Loading
     
     private var cancellables = Set<AnyCancellable>()
     

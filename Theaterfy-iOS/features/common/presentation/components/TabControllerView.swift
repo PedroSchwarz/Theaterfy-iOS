@@ -15,6 +15,9 @@ struct TabControllerView: View {
         case .NowPlayingTab:
             MoviesPage()
                 .transition(.opacity.animation(Animation.linear(duration: 0.5)))
+        case .SearchTab:
+            SearchMoviesPage()
+                .transition(.opacity.animation(Animation.linear(duration: 0.5)))
         case .WatchLaterTab:
             CachedMoviesPage(type: .WatchLaterAction)
                 .transition(.opacity.animation(Animation.linear(duration: 0.5)))

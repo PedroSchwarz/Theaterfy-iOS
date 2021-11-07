@@ -34,6 +34,8 @@ class TabViewModel : ObservableObject {
         switch tab {
         case .NowPlayingTab:
             return RoutesLocales.nowPlayingRouteName
+        case .SearchTab:
+            return RoutesLocales.searchRouteName
         case .WatchLaterTab:
             return RoutesLocales.watchLaterRouteName
         case .FavoritesTab:
@@ -45,6 +47,8 @@ class TabViewModel : ObservableObject {
         switch tab {
         case .NowPlayingTab:
             return MoviesIcons.nowPlaying
+        case .SearchTab:
+            return MoviesIcons.search
         case .WatchLaterTab:
             return MoviesIcons.watchLater
         case .FavoritesTab:
@@ -55,6 +59,7 @@ class TabViewModel : ObservableObject {
 
 enum TabState : CaseIterable {
     case NowPlayingTab
+    case SearchTab
     case WatchLaterTab
     case FavoritesTab
 }
