@@ -32,6 +32,15 @@ struct MovieDetailsPage: View {
                             .foregroundColor(.accentColor)
                         
                         Spacer()
+                        
+                        MovieDetailsActions(
+                            watchLater: viewModel.watchLater,
+                            favorite: viewModel.favorite
+                        ) {
+                            viewModel.callToggleMovieAction(movie: movie, type: .WatchLaterAction)
+                        } onFavorite: {
+                            viewModel.callToggleMovieAction(movie: movie, type: .FavoriteAction)
+                        }
                     }
                     
                     Text(movie.overview)

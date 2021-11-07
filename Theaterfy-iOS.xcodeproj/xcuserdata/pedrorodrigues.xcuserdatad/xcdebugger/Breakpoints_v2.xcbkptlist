@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "34A2C69D-3629-46E4-9D93-A94B6922C166"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FF19E23-E8B7-4633-AE7D-20CDB9FA533B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Theaterfy-iOS/features/common/presentation/components/TabControllerButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "TabControllerButton"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "2FF19E23-E8B7-4633-AE7D-20CDB9FA533B - f2d013753e2c8b27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of Theaterfy_iOS.TabControllerButton.active : Swift.Bool"
+                  moduleName = "Theaterfy-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pedrorodrigues/Documents/Projects/Theaterfy-iOS/Theaterfy-iOS/features/common/presentation/components/TabControllerButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "2FF19E23-E8B7-4633-AE7D-20CDB9FA533B - eb7cb097513b940"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Theaterfy_iOS.TabControllerButton.init(label: Swift.String, icon: Swift.String) -&gt; Theaterfy_iOS.TabControllerButton"
+                  moduleName = "Theaterfy-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pedrorodrigues/Documents/Projects/Theaterfy-iOS/Theaterfy-iOS/features/common/presentation/components/TabControllerButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

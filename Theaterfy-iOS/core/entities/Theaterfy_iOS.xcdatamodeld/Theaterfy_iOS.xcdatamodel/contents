@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MovieCore" representedClassName="MovieCore" syncable="YES" codeGenerationType="class">
+        <attribute name="adult" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="backdrop_url" attributeType="String"/>
+        <attribute name="favorite" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="original_title" attributeType="String"/>
+        <attribute name="overview" attributeType="String"/>
+        <attribute name="poster_url" attributeType="String"/>
+        <attribute name="release_date" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="vote_average" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="vote_count" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="watch_later" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="MovieCore" positionX="-63" positionY="-18" width="128" height="209"/>
     </elements>
 </model>

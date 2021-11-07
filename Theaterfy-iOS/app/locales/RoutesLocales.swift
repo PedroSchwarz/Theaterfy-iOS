@@ -8,5 +8,7 @@
 import Foundation
 
 struct RoutesLocales {
-    static let nowLoadingRouteName = "Now Playing"
+    static let nowPlayingRouteName = "Now Playing"
+    static let watchLaterRouteName = "Watch Later"
+    static let favoritesRouteName = "Favorites"
 }

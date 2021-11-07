@@ -15,7 +15,7 @@ struct Theaterfy_iOSApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MoviesPage()
+            TabPage()
         }
     }
 }

@@ -43,7 +43,7 @@ struct CircularProgress: View {
             .onAppear {
                 if self.showAnimation {
                     withAnimation(.easeOut(duration: 1)) {
-                        self.startAnimation.toggle()
+                        self.startAnimation = true
                     }
                 }
             }

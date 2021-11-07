@@ -11,3 +11,8 @@ import SwiftUI
 struct MoviesProperties {
     static let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible(), spacing: 0), count: 2)
 }
+
+enum MovieActionType {
+    case FavoriteAction
+    case WatchLaterAction
+}

@@ -33,8 +33,8 @@ struct MovieDetailsRecommendations: View {
                                 .padding(.trailing, result.last!.id == item.id ? 16 : 0)
                         }
                     }
+                    .padding(.vertical, 20)
                 }
-                .padding(.vertical, 10)
             }
         }
     }
