@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MoviesIcons {
+    static let nowPlaying = "play.fill"
     static let popularity = "face.smiling"
     static let productionCompanies = "building.2"
     static let genres = "theatermasks.circle"

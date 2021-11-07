@@ -16,6 +16,7 @@ struct ErrorMessage: View {
             Text(self.message)
             Spacer()
         }
+        .frame(height: CommonProperties.screenHeight / 2)
     }
 }
 

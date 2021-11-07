@@ -26,4 +26,12 @@ struct MoviesLocales {
     static let genres = "Movie Genres"
     
     static let recommendations = "Recommendations"
+    
+    static let latestMovie = "Latest Movie Released"
+    
+    static let nowOnTheaters = "Now on Theaters"
+    
+    static let watchLaterHelperText = "Add to Watch Later"
+    
+    static let favoritesHelperText = "Add to Favorites"
 }

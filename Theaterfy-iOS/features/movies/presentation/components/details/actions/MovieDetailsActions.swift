@@ -15,27 +15,27 @@ struct MovieDetailsActions: View {
     
     var body: some View {
         HStack(spacing: 10) {
-            Button {
+            MovieDetailsActionButton(onClicked: {
                 onWatchLater()
-            } label: {
-                Image(systemName: watchLater ? MoviesIcons.watchLater : MoviesIcons.unwatchLater)
-                    .padding(10)
-                    .background(Circle().stroke(lineWidth: 2).fill(CommonColors.WatchLaterColor))
-                    .foregroundColor(CommonColors.WatchLaterColor)
-                    .opacity(watchLater ? 1 : 0.5)
-                    .animation(.easeOut(duration: 1), value: watchLater)
-            }
+                CommonGestures.makeHapticFeedback()
+            },
+                                     active: watchLater,
+                                     activeIcon: MoviesIcons.watchLater,
+                                     unactiveIcon: MoviesIcons.unwatchLater,
+                                     color: CommonColors.WatchLaterColor
+            )
+                .help(MoviesLocales.watchLaterHelperText)
             
-            Button {
+            MovieDetailsActionButton(onClicked: {
                 onFavorite()
-            } label: {
-                Image(systemName: favorite ? MoviesIcons.favorite : MoviesIcons.unfavorite)
-                    .padding(10)
-                    .background(Circle().stroke(lineWidth: 2).fill(CommonColors.FavoriteColor))
-                    .foregroundColor(CommonColors.FavoriteColor)
-                    .opacity(favorite ? 1 : 0.5)
-                    .animation(.easeOut(duration: 1), value: favorite)
-            }
+                CommonGestures.makeHapticFeedback()
+            },
+                                     active: favorite,
+                                     activeIcon: MoviesIcons.favorite,
+                                     unactiveIcon: MoviesIcons.unfavorite,
+                                     color: CommonColors.FavoriteColor
+            )
+                .help(MoviesLocales.favoritesHelperText)
         }
     }
 }

@@ -9,20 +9,36 @@ import SwiftUI
 
 struct MoviesGrid: View {
     var movies: [Movie]
+    var hasLatest: Bool = false
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: MoviesProperties.gridLayout) {
-                ForEach(self.movies, id: \.id) { item in
-                    NavigationLink {
-                        MovieDetailsPage(movie: item)
-                    } label: {
-                        MovieItem(movie: item)
-                            .foregroundColor(.primary)
+            if hasLatest {
+                LatestMovieSection(movie: movies.first!)
+            }
+            
+            VStack(alignment: .leading) {
+                if hasLatest {
+                    Text(MoviesLocales.nowOnTheaters)
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(CommonColors.SteelBlueColor)
+                        .padding(.horizontal)
+                }
+                
+                LazyVGrid(columns: MoviesProperties.gridLayout) {
+                    ForEach(hasLatest ? Array(movies.dropFirst()) : movies, id: \.id) { item in
+                        NavigationLink {
+                            MovieDetailsPage(movie: item)
+                        } label: {
+                            MovieItem(movie: item)
+                                .foregroundColor(.primary)
+                        }
                     }
                 }
+                .padding(.vertical, 20)
             }
-            .padding(.top, 10)
+            .padding(.top, 30)
         }
     }
 }
