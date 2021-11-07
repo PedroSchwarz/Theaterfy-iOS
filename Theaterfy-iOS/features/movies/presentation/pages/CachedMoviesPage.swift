@@ -19,7 +19,11 @@ struct CachedMoviesPage: View {
             case .Failure(let error):
                 ErrorMessage(message: error)
             case .Success(let results):
-                MoviesGrid(movies: results)
+                if results.isEmpty {
+                    MoviesEmptyList()
+                } else {
+                    MoviesGrid(movies: results)
+                }
             }
         }
         .navigationTitle(type == .FavoriteAction ? RoutesLocales.favoritesRouteName : RoutesLocales.watchLaterRouteName)
