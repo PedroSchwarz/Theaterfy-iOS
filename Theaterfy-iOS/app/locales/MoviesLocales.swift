@@ -42,4 +42,6 @@ struct MoviesLocales {
     static let emptyListWatchLater = "Watch Later"
     
     static let emptyListFavorites = "Favorites"
+    
+    static let searchMovieFieldHint = "Search movie"
 }

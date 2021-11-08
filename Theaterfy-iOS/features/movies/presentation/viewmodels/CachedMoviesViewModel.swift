@@ -20,6 +20,8 @@ class CachedMoviesViewModel : ObservableObject {
     }
     
     func callGetMoviesByAction(_ type: MovieActionType) {
+        state = .Loading
+        
         getMoviesByAction.execute(params: GetMoviesByActionParams(type: type))
             .sink { completion in
                 switch completion {

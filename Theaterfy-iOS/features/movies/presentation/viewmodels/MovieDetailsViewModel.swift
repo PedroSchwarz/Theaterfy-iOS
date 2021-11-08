@@ -34,6 +34,8 @@ class MovieDetailsViewModel : ObservableObject {
     }
     
     func callGetMovieDetails(_ id: Int) {
+        state = .Loading
+        
         getMovieDetails.execute(params: GetMovieDetailsParams(id: id))
             .sink { completion in
                 switch completion {
@@ -44,6 +46,8 @@ class MovieDetailsViewModel : ObservableObject {
                 }
             } receiveValue: { self.state = .Success(result: $0) }
             .store(in: &cancellables)
+        
+        recommendationsState = .Loading
         
         getMovieRecommendations.execute(params: GetMovieRecommendationsParams(id: id))
             .sink { completion in

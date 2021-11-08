@@ -11,7 +11,7 @@ import Combine
 class MoviesViewModel : ObservableObject {
     private var getMovies: GetMovies
     
-    @Published private(set) var state: MoviesState = .Loading
+    @Published var state: MoviesState = .Loading
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -20,6 +20,8 @@ class MoviesViewModel : ObservableObject {
     }
     
     func callGetMovies() {
+        state = .Loading
+        
         getMovies.execute(params: GetMoviesParams(page: 1))
             .sink { completion in
                 switch completion {

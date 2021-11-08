@@ -17,6 +17,14 @@ struct LatestMovieItem: View {
         GeometryReader { geo in
             ZStack {
                 MovieImage(image: movie.posterUrl, size: 300)
+                    .overlay(LinearGradient(
+                        colors: [Color.clear, Color.black.opacity(0.5), Color.black.opacity(0.6)],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                        .cornerRadius(10)
+                    )
+                    .offset(y: LatestMovieAnimations.calcOffsetImage(minY: geo.frame(in: .global).minY - originalY))
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Spacer()
@@ -44,18 +52,18 @@ struct LatestMovieItem: View {
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.white)
                 .padding()
-                .background(
-                    LinearGradient(
-                        colors: [Color.clear, Color.black.opacity(0.5), Color.black.opacity(0.6)],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                        .cornerRadius(10)
-                )
+//                .background(
+//                    LinearGradient(
+//                        colors: [Color.clear, Color.black.opacity(0.5), Color.black.opacity(0.6)],
+//                        startPoint: .top,
+//                        endPoint: .bottom
+//                    )
+//                        .cornerRadius(10)
+//                )
             }
             .shadow(color: Color.black, radius: 20, x: 0, y: 2)
             .offset(y: LatestMovieAnimations.calcOffset(minY: geo.frame(in: .global).minY - originalY))
-            .opacity(LatestMovieAnimations.calcOpacity(minY: geo.frame(in: .global).minY / originalY))
+//            .opacity(LatestMovieAnimations.calcOpacity(minY: geo.frame(in: .global).minY / originalY))
             .blur(radius: LatestMovieAnimations.calcBlur(minY: geo.frame(in: .global).minY - originalY))
             .scaleEffect(
                 x: LatestMovieAnimations.calcScale(minY: geo.frame(in: .global).minY - originalY),

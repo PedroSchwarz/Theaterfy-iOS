@@ -8,31 +8,40 @@
 import SwiftUI
 
 struct SearchBar: View {
+    @State private var originalY: CGFloat = 0
     @Binding var query: String
     var onSearch: () -> Void
     
     var body: some View {
-        VStack {
-            HStack {
-                TextField("Search movie", text: $query)
-                    .keyboardType(.default)
-                    .font(.title)
-                    .padding(10)
-                
-                Button {
-                    onSearch()
-                } label: {
-                    Image(systemName: "chevron.right")
-                        .padding(.horizontal)
+        GeometryReader { geo in
+            VStack {
+                HStack {
+                    TextField(MoviesLocales.searchMovieFieldHint, text: $query)
+                        .keyboardType(.default)
+                        .font(.title)
+                        .padding(10)
+                    
+                    Button {
+                        onSearch()
+                    } label: {
+                        Image(systemName: CommonIcons.arrowRight)
+                            .padding(.horizontal)
+                    }
                 }
+                Divider()
+                    .background(
+                        Color.accentColor
+                    )
             }
-            Divider()
-                .background(
-                    Color.accentColor
-                )
+            .padding(.top, 20)
+            .padding(.horizontal, 16)
+            .offset(y: SearchBarAnimations.calcOffset(minY: geo.frame(in: .global).minY - originalY))
+            .opacity(SearchBarAnimations.calcOpacity(minY: geo.frame(in: .global).minY / originalY))
+            .onAppear {
+                originalY = geo.frame(in: .global).minY
+            }
         }
-        .padding(.top, 20)
-        .padding(.horizontal, 16)
+        .frame(height: 50)
     }
 }
 
