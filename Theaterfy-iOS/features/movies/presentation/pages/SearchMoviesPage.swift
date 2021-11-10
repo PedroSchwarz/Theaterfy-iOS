@@ -25,7 +25,7 @@ struct SearchMoviesPage: View {
             case .Failure(let error):
                 ErrorMessage(message: error)
             case .Success(let results):
-                MoviesGrid(movies: results, hasLatest: false)
+                MoviesGrid(movies: results)
             }
         }
         .navigationTitle(RoutesLocales.searchRouteName)

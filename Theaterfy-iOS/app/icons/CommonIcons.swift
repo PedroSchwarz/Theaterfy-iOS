@@ -9,4 +9,5 @@ import Foundation
 
 struct CommonIcons {
     static let arrowRight = "chevron.right"
+    static let arrowLeft = "chevron.left"
 }

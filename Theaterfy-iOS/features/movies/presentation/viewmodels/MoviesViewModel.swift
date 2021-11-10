@@ -11,7 +11,10 @@ import Combine
 class MoviesViewModel : ObservableObject {
     private var getMovies: GetMovies
     
-    @Published var state: MoviesState = .Loading
+    @Published private(set) var state: MoviesState = .Loading
+    @Published private(set) var isLoadingNextPage: Bool = false
+    @Published private var currentPage: Int = 1
+    @Published private var movies: [Movie] = []
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -19,18 +22,25 @@ class MoviesViewModel : ObservableObject {
         self.getMovies = getMovies
     }
     
-    func callGetMovies() {
-        state = .Loading
+    func callGetMovies(isNextPage: Bool = false) {
+        if !isNextPage {
+            state = .Loading
+        }
         
-        getMovies.execute(params: GetMoviesParams(page: 1))
+        getMovies.execute(params: GetMoviesParams(page: currentPage))
             .sink { completion in
                 switch completion {
                 case .finished:
                     break
                 case .failure(let failure):
-                    self.state = .Failure(error: self.mapFailureToMessage(failure: failure))
+                    if !isNextPage {
+                        self.state = .Failure(error: self.mapFailureToMessage(failure: failure))
+                    }
                 }
-            } receiveValue: { self.state = .Success(results: $0) }
+            } receiveValue: {
+                self.movies.append(contentsOf: $0)
+                self.state = .Success(results: self.movies)
+            }
             .store(in: &cancellables)
     }
     
@@ -41,6 +51,16 @@ class MoviesViewModel : ObservableObject {
         case .CacheFailure(let message):
             return message
         }
+    }
+    
+    func loadNextPage() {
+        isLoadingNextPage = true
+        
+        currentPage = currentPage + 1
+        
+        callGetMovies(isNextPage: true)
+        
+        isLoadingNextPage = false
     }
 }
 

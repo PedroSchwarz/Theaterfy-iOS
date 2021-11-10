@@ -91,6 +91,8 @@
 		34B024A927388665005D1FB4 /* SearchBarAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B024A827388665005D1FB4 /* SearchBarAnimations.swift */; };
 		34B024AB273886B6005D1FB4 /* CommonIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B024AA273886B6005D1FB4 /* CommonIcons.swift */; };
 		34B024AD2738B335005D1FB4 /* MoviesRefreshList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B024AC2738B335005D1FB4 /* MoviesRefreshList.swift */; };
+		34BA1100273B7A5E002262A2 /* MovieItemAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BA10FF273B7A5E002262A2 /* MovieItemAnimations.swift */; };
+		34BA1102273B8B73002262A2 /* MovieDetailsCarouselAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BA1101273B8B73002262A2 /* MovieDetailsCarouselAnimations.swift */; };
 		34FBFDB9272A11E4003E504C /* LoadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDB8272A11E4003E504C /* LoadingProgress.swift */; };
 		34FBFDBB272A1211003E504C /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDBA272A1211003E504C /* ErrorMessage.swift */; };
 		34FBFDBD272A1265003E504C /* MoviesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBFDBC272A1265003E504C /* MoviesGrid.swift */; };
@@ -206,6 +208,8 @@
 		34B024A827388665005D1FB4 /* SearchBarAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarAnimations.swift; sourceTree = "<group>"; };
 		34B024AA273886B6005D1FB4 /* CommonIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonIcons.swift; sourceTree = "<group>"; };
 		34B024AC2738B335005D1FB4 /* MoviesRefreshList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRefreshList.swift; sourceTree = "<group>"; };
+		34BA10FF273B7A5E002262A2 /* MovieItemAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemAnimations.swift; sourceTree = "<group>"; };
+		34BA1101273B8B73002262A2 /* MovieDetailsCarouselAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsCarouselAnimations.swift; sourceTree = "<group>"; };
 		34FBFDB8272A11E4003E504C /* LoadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProgress.swift; sourceTree = "<group>"; };
 		34FBFDBA272A1211003E504C /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		34FBFDBC272A1265003E504C /* MoviesGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesGrid.swift; sourceTree = "<group>"; };
@@ -674,6 +678,8 @@
 			children = (
 				34B0249927386193005D1FB4 /* LatestMovieAnimations.swift */,
 				34B024A827388665005D1FB4 /* SearchBarAnimations.swift */,
+				34BA10FF273B7A5E002262A2 /* MovieItemAnimations.swift */,
+				34BA1101273B8B73002262A2 /* MovieDetailsCarouselAnimations.swift */,
 			);
 			path = animations;
 			sourceTree = "<group>";
@@ -936,6 +942,7 @@
 				34828DDE272DAF720047C546 /* CommonProperties.swift in Sources */,
 				34FBFDC2272A1348003E504C /* RoutesLocales.swift in Sources */,
 				345142CB2736E06A00A5A918 /* MovieCoreData.swift in Sources */,
+				34BA1100273B7A5E002262A2 /* MovieItemAnimations.swift in Sources */,
 				34FBFDC5272A1484003E504C /* MovieItem.swift in Sources */,
 				34079DB92728B06D008B0C68 /* Pagination.swift in Sources */,
 				34FBFDCA272A1808003E504C /* MovieImage.swift in Sources */,
@@ -954,6 +961,7 @@
 				343C33E527337AD4007CD1AE /* MovieDetailsRecommendations.swift in Sources */,
 				34828E23272DD8770047C546 /* MovieDetailsProfit.swift in Sources */,
 				343C33DE273370D7007CD1AE /* MovieDetailsListCapsule.swift in Sources */,
+				34BA1102273B8B73002262A2 /* MovieDetailsCarouselAnimations.swift in Sources */,
 				34079DAF2728AB4B008B0C68 /* UseCase.swift in Sources */,
 				345142CD2736E61200A5A918 /* GetMoviesByAction.swift in Sources */,
 				343C33D4273367AD007CD1AE /* CircularProgress.swift in Sources */,

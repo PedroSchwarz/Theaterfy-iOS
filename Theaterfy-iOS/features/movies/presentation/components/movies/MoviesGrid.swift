@@ -10,33 +10,16 @@ import SwiftUI
 struct MoviesGrid: View {
     var movies: [Movie]
     var hasLatest: Bool = false
-    var onRefresh: (() -> Void)?
-    @State private var refreshing: Bool = false
+    var loadingNextPage: Bool = false
+    var onNextPage: (() -> Void)?
     
     var body: some View {
         ScrollView {
             if hasLatest {
-                GeometryReader { geo in
-                    if (geo.frame(in: .global).minY > 350 || refreshing) && onRefresh != nil {
-                        MoviesRefreshList {
-                            refreshing = true
-                            onRefresh!()
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                refreshing = false
-                            }
-                        }
-                    }
-                    
-                    LatestMovieSection(movie: movies.first!)
-                        .padding(.vertical, (onRefresh != nil && refreshing) ? 50 : 0)
-                        .animation(.linear(duration: 0.4), value: refreshing)
-                }
-                .frame(height: 380)
-                .padding(.bottom, (onRefresh != nil && refreshing) ? 50 : 0)
-                .animation(.linear(duration: 0.8), value: refreshing)
+                LatestMovieSection(movie: movies.first!)
             }
             
-            VStack(alignment: .leading) {
+            LazyVStack(alignment: .leading) {
                 if hasLatest {
                     Text(MoviesLocales.nowOnTheaters)
                         .font(.title)
@@ -50,12 +33,34 @@ struct MoviesGrid: View {
                         NavigationLink {
                             MovieDetailsPage(movie: item)
                         } label: {
-                            MovieItem(movie: item)
-                                .foregroundColor(.primary)
+                            GeometryReader { geo in
+                                MovieItem(movie: item)
+                                    .foregroundColor(.primary)
+                                    .opacity(MovieItemAnimations.calcOpacity(minY: geo.frame(in: .global).minY))
+                                    .offset(y: MovieItemAnimations.calcOffset(minY: geo.frame(in: .global).minY))
+                            }
+                            .frame(minHeight: 270, maxHeight: 300)
                         }
                     }
                 }
                 .padding(.vertical, 20)
+                
+                GeometryReader { geo in
+                    if onNextPage != nil && !loadingNextPage && geo.frame(in: .global).minY < CommonProperties.screenHeight - 200 {
+                        VStack {}
+                        .onAppear {
+                            onNextPage!()
+                        }
+                    }
+                    
+                    if loadingNextPage {
+                        VStack(alignment: .center) {
+                            ProgressView()
+                        }
+                        .frame(width: CommonProperties.screenWidth)
+                    }
+                }
+                .frame(height: 50)
             }
             .padding(.top, 30)
         }
@@ -64,8 +69,6 @@ struct MoviesGrid: View {
 
 struct MoviesGrid_Previews: PreviewProvider {
     static var previews: some View {
-        MoviesGrid(movies: [MovieModel.dumbInstance().toEntity()]) {
-            print("Refreshing")
-        }
+        MoviesGrid(movies: [MovieModel.dumbInstance().toEntity()])
     }
 }

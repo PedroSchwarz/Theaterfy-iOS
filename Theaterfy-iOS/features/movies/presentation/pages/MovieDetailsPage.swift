@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MovieDetailsPage: View {
+    @Environment(\.presentationMode) var dismiss
     var movie: Movie
     
     @StateObject private var viewModel = AppModules.container.resolve(MovieDetailsViewModel.self)!
@@ -15,10 +16,13 @@ struct MovieDetailsPage: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 20) {
+                
                 MovieDetailsCarousel(
                     images: [movie.posterUrl, movie.backdropUrl],
                     size: 400
-                )
+                ) {
+                    dismiss.wrappedValue.dismiss()
+                }
                 
                 VStack(alignment: .leading, spacing: 20) {
                     Text(movie.title)
@@ -58,6 +62,7 @@ struct MovieDetailsPage: View {
                 Spacer()
             }
         }
+        .navigationBarHidden(true)
         .edgesIgnoringSafeArea(.top)
         .onAppear {
             viewModel.callGetMovieDetails(movie.id)

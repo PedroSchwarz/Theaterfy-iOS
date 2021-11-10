@@ -18,8 +18,8 @@ struct MoviesPage: View {
             case .Failure(let error):
                 ErrorMessage(message: error)
             case .Success(let results):
-                MoviesGrid(movies: results, hasLatest: true) {
-                    viewModel.callGetMovies()
+                MoviesGrid(movies: results, hasLatest: true, loadingNextPage: viewModel.isLoadingNextPage) {
+                    viewModel.loadNextPage()
                 }
             }
         }
