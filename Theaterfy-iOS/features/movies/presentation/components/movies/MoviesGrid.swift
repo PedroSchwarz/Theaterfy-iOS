@@ -29,7 +29,7 @@ struct MoviesGrid: View {
                 }
                 
                 LazyVGrid(columns: MoviesProperties.gridLayout) {
-                    ForEach(hasLatest ? Array(movies.dropFirst()) : movies, id: \.id) { item in
+                    ForEach(hasLatest ? Array(movies.dropFirst()) : movies) { item in
                         NavigationLink {
                             MovieDetailsPage(movie: item)
                         } label: {

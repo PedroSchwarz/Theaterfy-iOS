@@ -24,9 +24,6 @@ struct MoviesPage: View {
             }
         }
         .navigationTitle(RoutesLocales.nowPlayingRouteName)
-        .onAppear {
-            viewModel.callGetMovies()
-        }
     }
 }
 

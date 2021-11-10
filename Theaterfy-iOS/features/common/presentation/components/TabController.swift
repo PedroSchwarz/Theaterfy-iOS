@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct TabController: View {
-    @EnvironmentObject private var viewModel: TabViewModel
+    @ObservedObject var viewModel: TabViewModel
+    var onSelected: (TabState) -> Void
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 10) {
-                ForEach(TabState.allCases, id: \.self) { tab in
+                ForEach(TabState.allCases, id: \.rawValue) { tab in
                     TabControllerButton(
-                        active: tab == viewModel.activeTab,
+                        active: tab.rawValue == viewModel.activeTab.rawValue,
                         label: viewModel.mapTabToLabel(tab),
                         icon: viewModel.mapTabToIcon(tab)
                     ) {
-                        viewModel.setActiveTab(tab)
+                        onSelected(tab)
                     }
-                        .padding(.leading, tab == .NowPlayingTab ? 10 : 0)
-                        .padding(.trailing, tab == .FavoritesTab ? 10 : 0)
+                    .padding(.leading, tab == .NowPlayingTab ? 10 : 0)
+                    .padding(.trailing, tab == .FavoritesTab ? 10 : 0)
                 }
             }
             .padding(.vertical, 10)
@@ -30,8 +31,8 @@ struct TabController: View {
     }
 }
 
-struct TabController_Previews: PreviewProvider {
-    static var previews: some View {
-        TabController()
-    }
-}
+//struct TabController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TabController()
+//    }
+//}

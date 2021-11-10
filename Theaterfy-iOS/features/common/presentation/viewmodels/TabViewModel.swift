@@ -14,22 +14,6 @@ class TabViewModel : ObservableObject {
         activeTab = tab
     }
     
-    func goToNextTab() {
-        if activeTab == .NowPlayingTab {
-            setActiveTab(.WatchLaterTab)
-        } else if activeTab == .WatchLaterTab {
-            setActiveTab(.FavoritesTab)
-        }
-    }
-    
-    func goToPreviousTab() {
-        if activeTab == .FavoritesTab {
-            setActiveTab(.WatchLaterTab)
-        } else if activeTab == .WatchLaterTab {
-            setActiveTab(.NowPlayingTab)
-        }
-    }
-    
     func mapTabToLabel(_ tab: TabState) -> String {
         switch tab {
         case .NowPlayingTab:
@@ -57,9 +41,9 @@ class TabViewModel : ObservableObject {
     }
 }
 
-enum TabState : CaseIterable {
-    case NowPlayingTab
-    case SearchTab
-    case WatchLaterTab
-    case FavoritesTab
+enum TabState : String, CaseIterable {
+    case NowPlayingTab = "NowPlayingTab"
+    case SearchTab = "SearchTab"
+    case WatchLaterTab = "WatchLaterTab"
+    case FavoritesTab = "FavoritesTab"
 }

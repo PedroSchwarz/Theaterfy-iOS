@@ -13,9 +13,11 @@ struct TabPage: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                TabController()
+                TabController(viewModel: viewModel) {
+                    viewModel.setActiveTab($0)
+                }
                 
-                TabControllerView()
+                TabControllerView(viewModel: viewModel)
             }
         }
         .environmentObject(viewModel)

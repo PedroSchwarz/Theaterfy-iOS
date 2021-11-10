@@ -20,6 +20,7 @@ class MoviesViewModel : ObservableObject {
     
     init(getMovies: GetMovies) {
         self.getMovies = getMovies
+        callGetMovies()
     }
     
     func callGetMovies(isNextPage: Bool = false) {
@@ -38,8 +39,11 @@ class MoviesViewModel : ObservableObject {
                     }
                 }
             } receiveValue: {
+                if !isNextPage {
+                    self.movies.removeAll()
+                }
                 self.movies.append(contentsOf: $0)
-                self.state = .Success(results: self.movies)
+                self.state = .Success(results:  self.movies)
             }
             .store(in: &cancellables)
     }
