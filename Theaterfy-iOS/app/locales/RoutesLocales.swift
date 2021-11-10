@@ -9,6 +9,7 @@ import Foundation
 
 struct RoutesLocales {
     static let nowPlayingRouteName = "Now Playing"
+    static let searchRouteName = "Search Movies"
     static let watchLaterRouteName = "Watch Later"
     static let favoritesRouteName = "Favorites"
 }

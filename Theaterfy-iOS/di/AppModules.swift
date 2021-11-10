@@ -38,6 +38,7 @@ struct AppModules {
         container.register(GetMovieActions.self) { r in GetMovieActions(repository: r.resolve(MoviesRepository.self)!) }
         container.register(ToggleMovieAction.self) { r in ToggleMovieAction(repository: r.resolve(MoviesRepository.self)!) }
         container.register(GetMoviesByAction.self) { r in GetMoviesByAction(repository: r.resolve(MoviesRepository.self)!) }
+        container.register(SearchMovies.self) { r in SearchMovies(repository: r.resolve(MoviesRepository.self)!) }
         
         // ViewModels
         container.register(MoviesViewModel.self) { r in MoviesViewModel(getMovies: r.resolve(GetMovies.self)!) }
@@ -53,6 +54,9 @@ struct AppModules {
             CachedMoviesViewModel(
                 getMoviesByAction: r.resolve(GetMoviesByAction.self)!
             )
+        }
+        container.register(SearchMoviesViewModel.self) { r in
+            SearchMoviesViewModel(searchMovies: r.resolve(SearchMovies.self)!)
         }
         container.register(TabViewModel.self) { _ in TabViewModel() }
     }

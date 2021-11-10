@@ -80,4 +80,12 @@ struct MoviesRepositoryImpl : MoviesRepository {
                 .eraseToAnyPublisher()
         }
     }
+    
+    func searchMovies(_ query: String) -> AnyPublisher<[Movie], Failure> {
+        return remote.searchMovies(query)
+            .map { result in
+                result.map { $0.toEntity() }
+            }
+            .eraseToAnyPublisher()
+    }
 }

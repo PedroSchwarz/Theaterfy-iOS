@@ -14,10 +14,10 @@ class MovieDetailsViewModel : ObservableObject {
     private var getMovieActions: GetMovieActions
     private var toggleMovieAction: ToggleMovieAction
     
-    @Published var state: MovieDetailsState = .Loading
-    @Published var recommendationsState: MovieDetailsRecommendationsState = .Loading
-    @Published var watchLater: Bool = false
-    @Published var favorite: Bool = false
+    @Published private(set) var state: MovieDetailsState = .Loading
+    @Published private(set) var recommendationsState: MovieDetailsRecommendationsState = .Loading
+    @Published private(set) var watchLater: Bool = false
+    @Published private(set) var favorite: Bool = false
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -34,6 +34,8 @@ class MovieDetailsViewModel : ObservableObject {
     }
     
     func callGetMovieDetails(_ id: Int) {
+        state = .Loading
+        
         getMovieDetails.execute(params: GetMovieDetailsParams(id: id))
             .sink { completion in
                 switch completion {
@@ -44,6 +46,8 @@ class MovieDetailsViewModel : ObservableObject {
                 }
             } receiveValue: { self.state = .Success(result: $0) }
             .store(in: &cancellables)
+        
+        recommendationsState = .Loading
         
         getMovieRecommendations.execute(params: GetMovieRecommendationsParams(id: id))
             .sink { completion in

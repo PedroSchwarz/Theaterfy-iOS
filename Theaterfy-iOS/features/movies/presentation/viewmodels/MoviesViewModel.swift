@@ -20,6 +20,8 @@ class MoviesViewModel : ObservableObject {
     }
     
     func callGetMovies() {
+        state = .Loading
+        
         getMovies.execute(params: GetMoviesParams(page: 1))
             .sink { completion in
                 switch completion {

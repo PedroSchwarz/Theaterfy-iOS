@@ -16,12 +16,6 @@ struct TabPage: View {
                 TabController()
                 
                 TabControllerView()
-                    .gesture(TabGestures.dragGesture.onEnded({TabGestures.listenDragGesture($0) {
-                        viewModel.goToPreviousTab()
-                    } onRightSwipe: {
-                        viewModel.goToNextTab()
-                    }
-                    }))
             }
         }
         .environmentObject(viewModel)

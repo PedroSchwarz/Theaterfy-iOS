@@ -9,13 +9,25 @@ import Foundation
 import SwiftUI
 
 struct LatestMovieAnimations {
-    static func calcOffset(minY: CGFloat) -> CGFloat {
-        if minY <= -358 {
-            return -358
+    static func calcOffsetImage(minY: CGFloat) -> CGFloat {
+        if minY <= -600 {
+            return -600
         }
         
         if minY < 0 {
-            return minY / 2
+            return minY / -8
+        }
+        
+        return 0
+    }
+    
+    static func calcOffset(minY: CGFloat) -> CGFloat {
+        if minY <= -600 {
+            return -600
+        }
+        
+        if minY < 0 {
+            return minY / 5
         }
         
         return 0
@@ -38,11 +50,11 @@ struct LatestMovieAnimations {
             return 0
         }
         
-        if (-minY / 50 > 20) {
-            return 20
+        if (-minY / 70 > 15) {
+            return 15
         }
         
-        return -minY / 50
+        return -minY / 70
     }
     
     static func calcScale(minY: CGFloat) -> CGFloat {
