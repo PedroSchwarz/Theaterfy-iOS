@@ -27,14 +27,17 @@ struct MovieDetailsRecommendations: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack {
                         ForEach(result) { item in
-                            MovieItem(movie: item)
-                                .frame(width: 200)
-                                .padding(.leading, result.first!.id == item.id ? 16 : 0)
-                                .padding(.trailing, result.last!.id == item.id ? 16 : 0)
+                            GeometryReader { geo in
+                                MovieItem(movie: item)
+                                    .rotation3DEffect(Angle(degrees: (Double(geo.frame(in: .global).minX) - 94) / -20), axis: (x: 0, y: 1, z: 0))
+                            }
+                            .padding(.leading, result.first!.id == item.id ? 16 : 0)
+                            .padding(.trailing, result.last!.id == item.id ? 16 : 0)
+                            .frame(idealWidth: 220, idealHeight: 270)
                         }
                     }
+                    .padding(.vertical, 20)
                 }
-                .padding(.vertical, 10)
             }
         }
     }

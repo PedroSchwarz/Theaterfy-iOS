@@ -16,6 +16,7 @@ struct MovieItem: View {
                 // MovieImage
                 MovieImage(image: self.movie.posterUrl)
                 // Movie Content
+                
                 VStack(alignment: .leading, spacing: 5) {
                     Text(self.movie.title)
                         .font(.title3).bold()

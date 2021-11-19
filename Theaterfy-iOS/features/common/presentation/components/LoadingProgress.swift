@@ -14,6 +14,7 @@ struct LoadingProgress: View {
             ProgressView()
             Spacer()
         }
+        .frame(height: CommonProperties.screenHeight / 2)
     }
 }
 

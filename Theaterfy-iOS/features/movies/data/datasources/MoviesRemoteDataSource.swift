@@ -12,6 +12,7 @@ protocol MoviesRemoteDataSource {
     func getMovies(_ page: Int) -> AnyPublisher<[MovieModel], Failure>
     func getMovieDetails(_ id: Int) -> AnyPublisher<MovieDetailsModel, Failure>
     func getMovieRecommendations(_ id: Int) -> AnyPublisher<[MovieModel], Failure>
+    func searchMovies(_ query: String) -> AnyPublisher<[MovieModel], Failure>
 }
 
 struct MoviesRemoteDataSourceImpl : MoviesRemoteDataSource {
@@ -44,6 +45,17 @@ struct MoviesRemoteDataSourceImpl : MoviesRemoteDataSource {
             .map({ result in
                 result.results
             })
+            .eraseToAnyPublisher()
+    }
+    
+    func searchMovies(_ query: String) -> AnyPublisher<[MovieModel], Failure> {
+        return server.execute(
+            path: ServerConstants.buildPath(path: ServerConstants.SearchMovies.PATH, query: "&query=\(query)"),
+            decodable: PaginationModel<MovieModel>.self
+        )
+            .map { result in
+                result.results
+            }
             .eraseToAnyPublisher()
     }
 }

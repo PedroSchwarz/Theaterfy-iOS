@@ -16,10 +16,17 @@ struct MovieImage: View {
         if let url = self.image {
             KFImage.url(URL(string: url)!)
                 .placeholder({
-                    LoadingProgress()
+                    VStack {
+                        HStack {
+                            Spacer()
+                            LoadingProgress()
+                            Spacer()
+                        }
+                    }
+                    .background(Color.secondary.opacity(0.2))
                 })
                 .cacheMemoryOnly()
-                .fade(duration: 0.25)
+                .fade(duration: 0.1)
                 .resizable()
                 .scaledToFill()
                 .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: self.size)

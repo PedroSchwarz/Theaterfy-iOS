@@ -7,10 +7,12 @@
 
 import Foundation
 
-func formatCurrency(amount: Int) -> String {
-    let formatter = NumberFormatter()
-    formatter.currencySymbol = "$"
-    formatter.numberStyle = .currency
-    let value = formatter.string(from: NSNumber(value: amount))
-    return value ?? "Value not available"
+extension Int {
+    func currencyFormat() -> String {
+        let formatter = NumberFormatter()
+        formatter.currencySymbol = "$"
+        formatter.numberStyle = .currency
+        let value = formatter.string(from: NSNumber(value: self))
+        return value ?? "Value not available"
+    }
 }

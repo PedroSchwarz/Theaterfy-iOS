@@ -29,7 +29,7 @@ struct MovieModel : Model {
             originalTitle: self.original_title,
             overview: self.overview,
             posterUrl: self.poster_path != nil ? ServerConstants.Images.buildPathforPoster(url: self.poster_path!) : nil,
-            releaseDate: dateFormatterFromString(from: self.release_date),
+            releaseDate: self.release_date.dateFormat(),
             title: self.title,
             voteAverage: self.vote_average,
             voteCount: self.vote_count,
