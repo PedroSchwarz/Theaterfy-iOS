@@ -16,7 +16,7 @@ struct TabController: View {
             HStack(spacing: 10) {
                 ForEach(TabState.allCases, id: \.rawValue) { tab in
                     TabControllerButton(
-                        active: tab.rawValue == viewModel.activeTab.rawValue,
+                        active: tab.rawValue == viewModel.activeTab,
                         label: viewModel.mapTabToLabel(tab),
                         icon: viewModel.mapTabToIcon(tab)
                     ) {

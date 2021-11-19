@@ -8,10 +8,10 @@
 import Foundation
 
 class TabViewModel : ObservableObject {
-    @Published var activeTab: TabState = .NowPlayingTab
+    @Published var activeTab: String = TabState.NowPlayingTab.rawValue
     
     func setActiveTab(_ tab: TabState) {
-        activeTab = tab
+        activeTab = tab.rawValue
     }
     
     func mapTabToLabel(_ tab: TabState) -> String {

@@ -17,8 +17,14 @@ struct MovieDetailsCarousel: View {
             ZStack(alignment: .topLeading) {
                 TabView {
                     ForEach(images, id: \.self) { image in
-                        MovieImage(image: image, size: size)
-                            .frame(width: CommonProperties.screenWidth)
+                        GeometryReader { card in
+                            MovieImage(image: image, size: size)
+                                .scaleEffect(
+                                    y: MovieDetailsCarouselAnimations.calcImageCardScale(minX: card.frame(in: .global).minX),
+                                    anchor: .top
+                                )
+                        }
+                        .frame(width: CommonProperties.screenWidth)
                     }
                 }
                 .tabViewStyle(PageTabViewStyle())
@@ -27,7 +33,6 @@ struct MovieDetailsCarousel: View {
                 .offset(y: MovieDetailsCarouselAnimations.calcOffset(minY: geo.frame(in: .global).minY))
                 .blur(radius: MovieDetailsCarouselAnimations.calcBlur(minY: geo.frame(in: .global).minY))
                 .opacity(MovieDetailsCarouselAnimations.calcOpacity(minY: geo.frame(in: .global).minY))
-                
                 
                 Button {
                     onDismiss()

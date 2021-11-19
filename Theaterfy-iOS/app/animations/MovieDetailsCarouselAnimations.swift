@@ -9,6 +9,19 @@ import Foundation
 import SwiftUI
 
 struct MovieDetailsCarouselAnimations {
+    static func calcImageCardScale(minX: CGFloat) -> CGFloat {
+        if (minX < 0) {
+            return (minX / 2000) + 1
+        }
+        
+        if (minX > 0) {
+            return (-minX / 2000) + 1
+        }
+        
+        return 1
+    }
+    
+    
     static func calcOpacity(minY: CGFloat) -> CGFloat {
         if minY < 0 {
             let opacity = 1 + (minY / 100)

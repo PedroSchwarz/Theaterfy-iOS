@@ -12,18 +12,14 @@ struct TabControllerView: View {
     
     var body: some View {
         switch viewModel.activeTab {
-        case .NowPlayingTab:
+        case TabState.NowPlayingTab.rawValue:
             MoviesPage()
-//                .transition(.opacity.animation(Animation.linear(duration: 0.5)))
-        case .SearchTab:
+        case TabState.SearchTab.rawValue:
             SearchMoviesPage()
-//                .transition(.opacity.animation(Animation.linear(duration: 0.5)))
-        case .WatchLaterTab:
+        case TabState.WatchLaterTab.rawValue:
             CachedMoviesPage(type: .WatchLaterAction)
-//                .transition(.opacity.animation(Animation.linear(duration: 0.5)))
-        case .FavoritesTab:
+        default:
             CachedMoviesPage(type: .FavoriteAction)
-//                .transition(.opacity.animation(Animation.linear(duration: 0.5)))
         }
     }
 }

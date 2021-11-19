@@ -10,6 +10,7 @@ import SwiftUI
 struct MovieDetailsPage: View {
     @Environment(\.presentationMode) var dismiss
     var movie: Movie
+    @State private var animate: Bool = false
     
     @StateObject private var viewModel = AppModules.container.resolve(MovieDetailsViewModel.self)!
     
@@ -23,11 +24,17 @@ struct MovieDetailsPage: View {
                 ) {
                     dismiss.wrappedValue.dismiss()
                 }
+                .scaleEffect(x: animate ? 1 : 0.8, y: animate ? 1 : 0.8, anchor: .top)
+                .animation(.linear(duration: 0.5), value: animate)
                 
                 VStack(alignment: .leading, spacing: 20) {
                     Text(movie.title)
                         .font(.title)
                         .bold()
+                        .opacity(animate ? 1 : 0.5)
+                        .animation(.linear(duration: 1), value: animate)
+                        .offset(y: animate ? 0 : 30)
+                        .animation(.easeOut(duration: 0.5), value: animate)
                     
                     HStack {
                         Text(MoviesLocales.releasedOn)
@@ -46,9 +53,17 @@ struct MovieDetailsPage: View {
                             viewModel.callToggleMovieAction(movie: movie, type: .FavoriteAction)
                         }
                     }
+                    .opacity(animate ? 1 : 0.5)
+                    .animation(.linear(duration: 1.2), value: animate)
+                    .offset(y: animate ? 0 : 40)
+                    .animation(.easeOut(duration: 0.7), value: animate)
                     
                     Text(movie.overview)
                         .font(.title2)
+                        .opacity(animate ? 1 : 0.4)
+                        .animation(.linear(duration: 1.4), value: animate)
+                        .offset(y: animate ? 0 : 50)
+                        .animation(.easeOut(duration: 0.9), value: animate)
                 }
                 .padding(.horizontal)
                 
@@ -66,6 +81,7 @@ struct MovieDetailsPage: View {
         .edgesIgnoringSafeArea(.top)
         .onAppear {
             viewModel.callGetMovieDetails(movie.id)
+            animate.toggle()
         }
     }
 }
