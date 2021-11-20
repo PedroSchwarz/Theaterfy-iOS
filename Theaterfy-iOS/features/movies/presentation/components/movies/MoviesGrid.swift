@@ -11,6 +11,7 @@ struct MoviesGrid: View {
     var movies: [Movie]
     var hasLatest: Bool = false
     var loadingNextPage: Bool = false
+    var hasAnimations: Bool = false
     var onNextPage: (() -> Void)?
     
     var body: some View {
@@ -36,8 +37,8 @@ struct MoviesGrid: View {
                             GeometryReader { geo in
                                 MovieItem(movie: item)
                                     .foregroundColor(.primary)
-                                    .opacity(MovieItemAnimations.calcOpacity(minY: geo.frame(in: .global).minY))
-                                    .offset(y: MovieItemAnimations.calcOffset(minY: geo.frame(in: .global).minY))
+                                    .opacity(hasAnimations ? MovieItemAnimations.calcOpacity(minY: geo.frame(in: .global).minY) : 1)
+                                    .offset(y: hasAnimations ? MovieItemAnimations.calcOffset(minY: geo.frame(in: .global).minY) : 0)
                             }
                             .frame(minHeight: 270, maxHeight: 300)
                         }

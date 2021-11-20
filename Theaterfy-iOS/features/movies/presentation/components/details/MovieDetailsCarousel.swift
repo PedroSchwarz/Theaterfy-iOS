@@ -30,9 +30,6 @@ struct MovieDetailsCarousel: View {
                 .tabViewStyle(PageTabViewStyle())
                 .frame(height: size)
                 .scaleEffect(y: MovieDetailsCarouselAnimations.calcScale(minY: geo.frame(in: .global).minY), anchor: .top)
-                .offset(y: MovieDetailsCarouselAnimations.calcOffset(minY: geo.frame(in: .global).minY))
-                .blur(radius: MovieDetailsCarouselAnimations.calcBlur(minY: geo.frame(in: .global).minY))
-                .opacity(MovieDetailsCarouselAnimations.calcOpacity(minY: geo.frame(in: .global).minY))
                 
                 Button {
                     onDismiss()
@@ -52,10 +49,10 @@ struct MovieDetailsCarousel: View {
                 }
                 .shadow(color: CommonColors.ShadowColor, radius: 5, x: 0, y: 2)
                 .position(x: 40, y: 70)
-                .offset(y: MovieDetailsCarouselAnimations.calcOffset(minY: geo.frame(in: .global).minY))
-                .blur(radius: MovieDetailsCarouselAnimations.calcBlur(minY: geo.frame(in: .global).minY))
-                .opacity(MovieDetailsCarouselAnimations.calcOpacity(minY: geo.frame(in: .global).minY))
             }
+            .offset(y: MovieDetailsCarouselAnimations.calcOffset(minY: geo.frame(in: .global).minY))
+            .blur(radius: MovieDetailsCarouselAnimations.calcBlur(minY: geo.frame(in: .global).minY))
+            .opacity(MovieDetailsCarouselAnimations.calcOpacity(minY: geo.frame(in: .global).minY))
         }
         .frame(width: CommonProperties.screenWidth, height: size)
     }
