@@ -21,6 +21,7 @@
     <li><strong>Swinject</strong> - Injeção de Dependência <a href="https://github.com/Swinject/Swinject">link</a></li>
     <li><strong>Alamofire</strong> - HTTP networking <a href="https://github.com/Alamofire/Alamofire">link</a></li>
     <li><strong>Combine</strong> - Operações em eventos assíncronos <a href="https://developer.apple.com/documentation/combine">link</a></li>
-    <li><strong>Core Data</strong> - Gerenciador de modelo de entidades para salvamento local <a href="https://developer.apple.com/documentation/coredata">link</a></li>
+    <li><strong>Core Data</strong> - Gerenciador de modelo de entidades para salvamento local <a href="https://developer.apple.com/documentation/coredata">link</a> </li>
+    <li><strong>Kingfisher</strong> - Carregamento de imagens remotas <a href="https://github.com/onevcat/Kingfisher">link</a></li>
   </ul>
 </div>
