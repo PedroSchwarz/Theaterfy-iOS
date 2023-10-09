@@ -24,4 +24,8 @@
     <li><strong>Core Data</strong> - Local Database <a href="https://developer.apple.com/documentation/coredata">link</a> </li>
     <li><strong>Kingfisher</strong> - Network Images Loader <a href="https://github.com/onevcat/Kingfisher">link</a></li>
   </ul>
+  <h3>Dark Mode Example</h3>
+  
+  https://github.com/PedroSchwarz/Theaterfy-iOS/assets/13781127/a0ae3639-2e1d-47b2-8802-1e672acf2518
+
 </div>
